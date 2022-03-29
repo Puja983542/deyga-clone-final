@@ -112,6 +112,7 @@ input{
 #navbar11,#navbar22,#navbar33,#navbar44,#navbar55,#navbar66,#navbar77,#navbar88,#navbar99,#navbar1010,#navbar00{
     display: none;
     font-size: 13px;
+    background-color: #FFFFFF;
     
 }
 #navbar99>div:hover,#navbar77>div:hover,#navbar11>div:hover,#navbar22>div:hover,#navbar33>div:hover,#navbar44>div:hover,#navbar55>div:hover,#navbar66>div:hover{
