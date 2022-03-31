@@ -13,6 +13,7 @@
     position: sticky;
     top: 0;
     border: 2px solid whitesmoke;
+    z-index: 5;
 }
 #navbar>div:first-child{
     width: 100%;
@@ -63,11 +64,19 @@
     display: flex;
     margin-left: 3%;
 }
-input{
+#navbar>div:first-child>div:last-child>input{
     border: none;
     border-bottom: 1px solid black;
     width: 270px;
     outline: none;
+    padding-left: 10px;
+    font-size: 13px;
+    padding-bottom: 5px;
+}
+input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
 }
 
 #navbar>div:nth-child(2){
@@ -112,8 +121,8 @@ input{
 #navbar11,#navbar22,#navbar33,#navbar44,#navbar55,#navbar66,#navbar77,#navbar88,#navbar99,#navbar1010,#navbar00{
     display: none;
     font-size: 13px;
-    background-color: #FFFFFF;
-    
+    background-color: white;
+    z-index: 1;
 }
 #navbar99>div:hover,#navbar77>div:hover,#navbar11>div:hover,#navbar22>div:hover,#navbar33>div:hover,#navbar44>div:hover,#navbar55>div:hover,#navbar66>div:hover{
     color: grey;
@@ -155,7 +164,7 @@ input{
     width: 100%;
     height: 600px;
     /* border: 1px solid red; */
-    border-top: 1px solid #454545;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     padding-top: 15px;
 }
 #footer>div:nth-child(1){
@@ -237,6 +246,7 @@ input{
     display: block;
     width: 250px;
     margin-top: 30px;
+    padding-bottom: 5px;
 }
 #footer>div:nth-child(4)>div:nth-child(3)>button{
     
@@ -304,25 +314,316 @@ input{
  /* IngredientsPageCSS */
 
  #IngredientsContainer{
-     width: 81%;
+     width: 84%;
      display: grid;
-     grid-template-columns: repeat(4,239px);
+     grid-template-columns: repeat(4,289px);
      /* margin-left: 15%; */
      gap: 20px;
-     border: 5px solid green;
+     /* border: 5px solid green; */
      margin: auto;
+     margin-bottom: 90px;
+     margin-top: 50px;
  }
  #IngredientsContainer>div{
-     border: 1px solid red;
+     margin-bottom: 30px;
  }
  #IngredientsContainer>div>div{
      
      font-size: 12px;
      color: #000000;
      text-align: center;
+     margin-top: 15px;
  }
  #IngredientsContainer>div>img{
      width: 269px;
      height: 247.14px;
  }
+
+#IngredientsImage{
+    width: 100%;
+    height: 645px;
+    /* margin-top: 40px; */
+    margin-top: -9%;
+}
+#IngredientsDiv2{
+    display: flex;
+    width: 65%;
+    /* border: 3px solid red; */
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+#IngredientsDiv2>div:first-child{
+    width: 50%;
+    font-size: 22px;
+    font-weight: 600;
+}
+#IngredientsDiv2>div:last-child{
+    width: 45%;
+    font-size: 13px;
+    margin-left: 4%;
+    margin-top: -1%;
+    line-height: 19px;
+}
+
+#IngredientsHoverDiv{
+    width: 94%;
+    margin: auto;
+    /* border: 3px solid orangered; */
+}
+
+#IngredientsHoverDiv>div>button{
+    border-radius: 20px;
+    height: 29.44px;
+    font-size: 13px;
+    color: #A17C5F;
+    background-color: white;
+    border: 1px solid #A17C5F;
+    margin-left: 10px;
+}
+#IngredientsHoverDiv>div>button:hover{
+    color: white;
+    background-color: #A17C5F;
+}
+#IngredientsHoverDiv>div:first-child>button:nth-child(1){
+    width: 64px;
+    background-color: #A17C5F;
+    color: white;
+}
+#IngredientsHoverDiv>div:first-child>button:nth-child(2){
+    width: 74px;
+}
+#IngredientsHoverDiv>div:first-child>button:nth-child(3){
+    width: 115px;
+}
+#IngredientsHoverDiv>div:first-child>button:nth-child(4){
+    width: 104px;
+}
+#IngredientsHoverDiv>div:first-child>button:nth-child(5){
+    width: 126px;
+}
+#IngredientsHoverDiv>div:first-child>button:nth-child(6){
+    width: 131px;
+}
+#IngredientsHoverDiv>div:first-child>button:nth-child(7){
+    width: 126px;
+}
+#IngredientsHoverDiv>div:first-child>button:nth-child(8){
+    width: 128px;
+}
+#IngredientsHoverDiv>div:first-child>button:nth-child(9){
+    width: 105px;
+}
+#IngredientsHoverDiv>div:first-child>button:nth-child(10){
+    width: 106px;
+}
+#IngredientsHoverDiv>div:first-child>button:nth-child(11){
+    width: 103px;
+}
+#IngredientsHoverDiv>div:first-child{
+    margin-bottom: 6px;
+}
+#IngredientsHoverDiv>div:last-child{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+#IngredientsHoverDiv>div:last-child>button:nth-child(1){
+    width: 171px;
+}
+#IngredientsHoverDiv>div:last-child>button:nth-child(2){
+    width: 112px;
+}
+#IngredientsHoverDiv>div:last-child>button:nth-child(3){
+    width: 103px;
+}
+#IngredientsHoverDiv>div:last-child>button:nth-child(4){
+    width: 101px;
+}
+#IngredientsHoverDiv>div:last-child>button:nth-child(5){
+    width: 99px;
+}
+#IngredientsHoverDiv>div:last-child>button:nth-child(6){
+    width: 116px;
+}
+#IngredientsHoverDiv>div:last-child>button:nth-child(7){
+    width: 102px;
+}
+#IngredientsHoverDiv>div:last-child>button:nth-child(8){
+    width: 104px;
+}
+
+#stickyImages{
+    margin-left: 97.5%;
+    position: sticky;
+    /* right: 0; */
+    top: 40%;
+    /* margin-top: -50%; */
+   
+}
+#stickyImages>img{
+    width: 33px;
+    height: 32px;
+    border-radius: 50%;
+    display: block;
+    margin-top: 3px;
+}
+#stickyImages>img:last-child{
+    width: 45px;
+    height: 45px;
+    margin-left: -6px;
+    margin-top: -5px;
+}
+
+/* LoginPageCSS */
+
+#LoginContainer{
+    height: 419px;
+    width: 400px;
+    /* border: 2px solid deeppink; */
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 150px;
+}
+#LoginContainer>div:nth-child(1){
+    width: 400px;
+    height: 36.3px;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+#LoginContainer>div:nth-child(2){
+    width: 400px;
+    height: 40px;
+    background-color: rgb(59,89,152);
+    color: white;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+#LoginContainer>div:nth-child(3){
+    width: 400px;
+    height: 40px;
+    background-color: rgb(221,75,57);
+    color: white;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+#LoginContainer>div:nth-child(2)>div,#LoginContainer>div:nth-child(3)>div{
+    width: 400px;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+}
+#LoginContainer>div:nth-child(2)>div>img{
+    height: 100%;
+    width: 40px;
+}
+#LoginContainer>div:nth-child(3)>div>img{
+    height: 100%;
+    width: 50px;
+}
+#LoginContainer>div:nth-child(4){
+   text-align: center;
+   margin-top: 20px;
+   width: 100%;
+   height: 21px;
+   font-size: 13px;
+}
+#LoginContainer>input:nth-child(5){
+    width: 97%;
+    height: 42px;
+    /* border: 2px solid whitesmoke; */
+    margin-top: 20px;
+    padding-left: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border: none;
+}
+#LoginContainer>div:nth-child(6){
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 42px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    /* border: 2px solid green; */
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+#LoginContainer>div:nth-child(6)>input{
+    width: 80%;
+    height: 35px;
+    /* border: 2px solid whitesmoke; */
+    /* margin-top: 20px; */
+    padding-left: 10px;
+    /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+    border: none;
+    /* border-bottom: 1px solid whitesmoke; */
+}
+#LoginContainer>div:nth-child(6)>div{
+    width: 30%;
+    font-size: 11px;
+    color: #9D9D9D;
+    margin-top: 16px;
+    height: 42px;
+    margin-top: 30px;
+}
+#LoginContainer>button{
+    width: 100%;
+    height: 48px;
+    background-color: black;
+    color: white;
+    font-size: 17px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#LoginContainer>div:nth-child(8){
+    display: flex;
+    font-size: 13px;
+    width: 100%;
+    height: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+#LoginContainer>div:nth-child(8)>div:first-child{
+    color: #9D9D9D;
+}
+#LoginContainer>div:nth-child(8)>div:last-child:hover{
+    color: #9D9D9D;
+}
+
+#LoginHomeLogin{
+    display: flex;
+    margin-left: 40px;
+    margin-top: 60px;
+    font-size: 11px;
+    
+}
+#LoginHomeLogin>div:first-child{
+    text-decoration: underline;
+}
+#LoginHomeLogin>div:nth-child(2){
+    margin-left: 4px;
+    margin-right: 4px;
+}
+/* rgb(221,75,57) */
+
+
+/* SignUpPageCSS */
+.signupInput{
+    width: 97%;
+    height: 42px;
+    /* border: 2px solid whitesmoke; */
+    margin-top: 15px;
+    padding-left: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border: none;
+}
+#resisterbtn{
+    margin-top: 20px;
+}
+
+
 

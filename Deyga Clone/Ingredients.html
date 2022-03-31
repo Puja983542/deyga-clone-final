@@ -6,10 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingredients</title>
     <link rel="stylesheet" href="./styles/navbar_footer.css">
+    <style>
+       
+        .zoomImage{
+           
+            transform: scale(1);
+            transition: 1s ease-in-out;
+           
+        }
+        .zoomImage:hover{
+           
+            transform: scale(1.15);
+        }
+    </style>
 </head>
 <body>
     <div id="navbar"></div>
+    <div id="stickyImages">
+        <img src="https://lh3.googleusercontent.com/stk7qIhvTn-6p1x3eYOfqnNCdIkNjyIoZPlZtwiDCzdhxEYc8Gsm1obY0zYdR13NfW_UkF4=s88" alt=""/>
+        <img src="https://lh3.googleusercontent.com/7GC8KgKN3PBmRKrqYOpBvozvAkrDknIwHhpDyMlDhEo_xEEEmHN81MTm7dNQvMyg4CcZ=s87" alt=""/>
+        <img src="https://lh3.googleusercontent.com/viOmLsqBaf_hyffXvvUFInfNNDwwQp6UpqQkPQU6uQFK-eE2MJnRGVdetr2Df6Q1twm85w=s87" alt=""/>
+        <img src="https://lh3.googleusercontent.com/AGtkZJFXY39I8G7s0dXFAGzgVuvr_m5Li-5v2TDlpqWdQtXOmf9WG13REwpOBuKKDXD70A=s87" alt=""/>
+        <img src="https://cdn.shopify.com/s/files/1/0034/7901/1441/t/139/assets/ping-svg2.svg?v=1619612966" alt=""/>
+    </div>
+    <img id="IngredientsImage" src="https://cdn.shopify.com/s/files/1/0034/7901/1441/files/Ingredients-v2_x800.jpg?v=1601912763" alt=""/>
+    <div id="IngredientsDiv2">
+        <div>Our Ingredient are pure, natural and safe.</div>
+        <div>The goodness of the succulent aloe vera plant can help treat burns, acne and dry skin. It is nature's very own hydrant that helps you attain flawless skin and hair.</div>
+    </div>
+    <div id="IngredientsHoverDiv">
+        <div>
+            <button>ALL</button>
+            <button>ACNE</button>
+            <button>AGEING SKIN</button>
+            <button>BALDNESS</button>
+            <button>CHAPPED LIPS</button>
+            <button>CRACKED FOOT</button>
+            <button>CRACKED LIPS</button>
+            <button>DAMAGED HAIR</button>
+            <button>DANDRUFF</button>
+            <button>DARK SPOT</button>
+            <button>DULL SKIN</button>
+        </div>
+        <div>
+            <button>FACIAL PIGMENTATION</button>
+            <button>FRIZZY HAIR</button>
+            <button>GREY HAIR</button>
+            <button>HAIR FALL</button>
+            <button>MELASMA</button>
+            <button>OPEN PORES</button>
+            <button>SPLIT END</button>
+            <button>WRINKLES</button>
+        </div>
+    </div>
     <div id="IngredientsContainer"></div>
+    
     <div id="footer"></div>
     
 </body>
@@ -81,6 +132,7 @@
 
             let image = document.createElement("img");
             image.src = el.image_url;
+            image.setAttribute("class","zoomImage")
 
             let title = document.createElement("div");
             title.innerText = el.name;
@@ -91,8 +143,13 @@
     }
 
     IngredientsDisplay(IngredientsData);
-    
+
 </script>
+
+
+
+
+
 
 
 
