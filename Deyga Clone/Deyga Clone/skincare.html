@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>SkinCare Page</title>
     <link rel="stylesheet" href="./styles/navbar_footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -51,30 +51,45 @@
         body{
             overflow-x: hidden;
         }
-        #middle_container>div>img{
+
+        /* mainImg */
+        #middle_container>div>div>img{
             width: 280px;
             height: 340px;
             margin: 10px;
             border-radius: 7px;
             
         }
-        #middle_container>div>div{
+        /* div1,div2 */
+        #middle_container>div>div>div{
             display: flex;
-            
-            /* margin-top: 5px; */
+          
             width: 70%;
             margin-left: 70px;
             
         }
+        /* addToCart btn */
         .cart_button{
             height: 40px;
             width:100px;
             background-color: white;
             border-radius: 5px;
             margin-top: 20px;
-           
-          
+            border: 2px solid black;
+            border-radius: 45px;
+            width: 150px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+         
         }
+        .cart_button:hover{
+               background-color: black;
+               color: white;
+               border-radius: 45px;
+        }
+        /* div */
         .upper_container{
          
             position: relative;
@@ -85,23 +100,16 @@
             box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
             border-radius: 7px;
         }
-        .cart_button{
-            border: 2px solid black;
-            border-radius: 45px;
-            width: 150px;
-            margin-bottom: 20px;
-        }
-        .cart_button:hover{
-               background-color: black;
-               color: white;
-               border-radius: 45px;
-        }
-        #wish{
+      
+        
+        /* #wish{
            
             width: 40px;
             height: 30px;
             
-        }
+        } */
+        
+        /* heartIcon */
         i{
             width: 40px;
             height: 40px;
@@ -146,41 +154,42 @@
             height: 40px;
             width: 80px;
         }
+
+        /* div2 */
         #priceAndDel{
           margin-top: -1px;
           font-size: 13px;
         }
+
+        /* div1 */
         #stardiv{
             margin-top: 7px;
         }
+        /* review */
         #stardiv>div{
             margin-top: -3px;
         }
+        /* price */
         #priceAndDel>div{
             margin-right: -13px
         }
+        /* del */
         del{
             margin-left: -3px;
             color: #737373;
             font-weight: 600;
         }
-        .cart_button{
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
+        /* heartIcon */
         #suraj{
             /* background-color: deeppink; */
             padding-top: 6px;
         }
+        /* mainImg */
        #pic{
            width: 90%;
            margin-right: 5px;
        }
-       /* i>div\{
-           background-color: deeppink;
-       } */
+      
     </style>
 </head>
 <body>
@@ -296,8 +305,15 @@ function displaydata(cardarry){
 parent.innerHTML=null;
 
 cardarry.forEach(function(elem){
+    
     div=document.createElement("div")
     div.setAttribute("class",("upper_container"))
+
+    let myDiv = document.createElement("div")
+
+    myDiv.addEventListener("click",()=>{
+        window.location.href="./../payment.html"
+    })
 
     names=document.createElement("div")
     names.innerText=elem.name;
@@ -372,23 +388,23 @@ function () {
     cart=document.createElement("button");
     cart.innerText="Add To Cart";
     cart.setAttribute("class","cart_button")
+    cart.addEventListener("click",()=>{
+        window.location.href="./../Ingredients.html"
+    })
 
    // divwish.append(wish)
     div1.append(rate,rate2,rate3,rate4,rate5,reiv)
     
     div2.append(mrp,del)
-    div.append(imgs,wish,names,div1,div2,cart)
+    myDiv.append(imgs,wish,names,div1,div2)
+    div.append(myDiv,cart)
+    // div.append(imgs,wish,names,div1,div2,cart)
     parent.append(div)
 })
 }
 displaydata(cardarry)
 
-// function filhal(imgs,dusra){
-//    document.querySelector("#pic").src=dusra
-// }
-// function chlaja(imgs,phla){
-//     document.querySelector("#pic").src=phla
-// }
+
 </script>
 
 
