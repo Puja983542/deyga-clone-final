@@ -16,7 +16,7 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
 <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
     integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
@@ -42,8 +42,8 @@
         #middle_container{
             display: grid;
             grid-template-columns: repeat(4,22%);
-            gap: 30px;
-            width: 95%;
+            gap: 10px;
+            width: 90%;
             justify-content: space-between;
             border: 1px solid black;
             margin: auto;
@@ -61,7 +61,7 @@
         #middle_container>div>div{
             display: flex;
             
-            margin-top: 10px;
+            /* margin-top: 5px; */
             width: 70%;
             margin-left: 70px;
             
@@ -145,6 +145,29 @@
         option{
             height: 40px;
             width: 80px;
+        }
+        #priceAndDel{
+          margin-top: -1px;
+          font-size: 13px;
+        }
+        #stardiv{
+            margin-top: 7px;
+        }
+        #stardiv>div{
+            margin-top: -3px;
+        }
+        #priceAndDel>div{
+            margin-right: -13px
+        }
+        del{
+            margin-left: -3px;
+            color: #737373;
+            font-weight: 600;
+        }
+        .cart_button{
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -264,8 +287,11 @@ cardarry.forEach(function(elem){
     div=document.createElement("div")
     div.setAttribute("class",("upper_container"))
 
-    names=document.createElement("h4")
+    names=document.createElement("div")
     names.innerText=elem.name;
+    names.style.fontSize="17px"
+    names.style.color="#000000"
+    
     console.log(elem.name)
 
     imgs=document.createElement("img")
@@ -288,7 +314,7 @@ function () {
     imgs.src = elem.image;
 });
     div1=document.createElement("div")
-
+     div1.setAttribute("id","stardiv")
    
     wish=document.createElement("i")
     wish.setAttribute("class","fa fa-heart-o")
@@ -299,9 +325,9 @@ function () {
 
 
 
-    reiv=document.createElement("p")
+    reiv=document.createElement("div")
     reiv.innerText=elem.review;
-    reiv.style.marginLeft="20px"
+    reiv.style.marginLeft="2px"
     
     rate=document.createElement("span")
     rate.setAttribute("class","fa fa-star checked");
@@ -319,9 +345,11 @@ function () {
     rate5.setAttribute("class","fa fa-star checked");
 
     div2=document.createElement("div")
+    div2.setAttribute("id","priceAndDel")
     
 
-    mrp=document.createElement("p")
+    mrp=document.createElement("div")
+    mrp.setAttribute("id","price")
     mrp.innerText=elem.mrp;
 
     del=document.createElement("del")
