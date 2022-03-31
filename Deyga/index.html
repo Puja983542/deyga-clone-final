@@ -166,15 +166,17 @@
                 </div>
                 <div id="ContainerFounderFlex"></div>
             </div>
-           
-     </div>
 
-     <div>
+        </div>
+        <div style=" margin-top: 100px;">
+            <h1></h1>
+            <div id="pillar6DisplayContainer"
+                style=" display: grid;grid-template-columns: repeat(3,300px);grid-template-rows: repeat(2,300px);justify-content: center;">
 
 
 
-    </div>
-
+            </div>
+        </div>
 
 
 
@@ -223,6 +225,7 @@
 
 
                 </div>
+
 
             </div>
         </div>
@@ -1292,7 +1295,7 @@
 
         });
 
-   }
+    }
 
 
 
@@ -1395,12 +1398,58 @@
 
 
     // The six Pillars
-   let  pillarsData =[
-       {
-           image :"",
-           hovImg:""
-    }
-   ]
+    let pillarsData = [
+
+        {
+            img1: "https://drive.google.com/uc?export=view&id=1h4_6--bMfThho1ufKoxxBHm5cijIBrVJ",
+            img2: "https://drive.google.com/uc?export=view&id=1LfAJs383hHBh7ck2NoIlpeZ7jBBLLguQ",
+        },
+        {
+            img1: "https://drive.google.com/uc?export=view&id=1SLezwV1eTUfS0LZ0Lw7WDOysE7IjWeZv",
+            img2: "https://drive.google.com/uc?export=view&id=1MaHezvGjeK4C28D5eJ5q_q75y-ZP4U8t",
+        },
+        //
+        {
+            img1: "https://drive.google.com/uc?export=view&id=1EfDXdOnANRWEj0MBD2cRSlzg34ehbTwO",
+            img2: "https://drive.google.com/uc?export=view&id=11SqeHvQXmnA7FolN7P_AHO8USKdZyxSD",
+        },
+        {
+            img1: "https://drive.google.com/uc?export=view&id=1Zs98TyZmf7Q2iHOZauoy-EXvT1xVF7gr",
+            img2: "https://drive.google.com/uc?export=view&id=1ctM_8G2yZwHywK5eZzZ8wmvOAQVkcPCA",
+        },
+        {
+            img1: "https://drive.google.com/uc?export=view&id=1f-m6rnkps9YP5mIGTlFxc73LgvvPVsGZ",
+            img2: "https://drive.google.com/uc?export=view&id=19daLO2AiOWl_CIq431oWm-a7Wgt0Z3XB",
+        },
+        {
+            img1: "https://drive.google.com/uc?export=view&id=133l909zRxVYHyYqLVL0KdGKOfsdZo7fu",
+            img2: "https://drive.google.com/uc?export=view&id=1sryjoAflw6vw7OkEyY0j18G5M7HBoDzY",
+        },
+    ]
+    // "https://drive.google.com/uc?export=view&id=1sryjoAflw6vw7OkEyY0j18G5M7HBoDzY"
+
+    var pillar6DisplayContainer = document.getElementById("pillar6DisplayContainer")
+
+    pillarsData.map(function (ele, item) {
+
+        let image = document.createElement("img");
+        image.setAttribute("class", "ImageTransition");
+        image.style.transition = "all 0.4s ease-in-out";
+        image.src = ele.img1;
+
+        $(image).hover(function () {
+            image.src = ele.img2;
+
+        }, function () {
+            // out
+            image.src = ele.img1;
+        });
+
+
+
+
+        pillar6DisplayContainer.append(image)
+    })
 
 
 
