@@ -213,13 +213,13 @@
 
     <hr style="margin-bottom: 5%;">
     <div class="short">
-        <select name="cars" id="cars">
-            <option>Short</option>
-            <option value="volvo">Best Seller </option>
-            <option value="saab">Alphabetically A-Z</option>
-            <option value="saab">Alphabetically Z-A</option>
-            <option value="opel">High to Low</option>
-            <option value="audi">Low to High</option>
+        <select name="cars" id="cars" onchange="sortItems()">
+            <option value="Kalyani">Short</option>
+            <option value="Suraj">Best Seller </option>
+            <option value="Puja">Alphabetically A-Z</option>
+            <option value="Ajay">Alphabetically Z-A</option>
+            <option value="Shubham">Price-High to Low</option>
+            <option value="Mohit">Price-Low to High</option>
           </select>
     </div>
     <hr>
@@ -278,7 +278,7 @@
       {id:17, name:"Tanner's Cassia Face Pack", image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A7869_3c64ea1e-910f-4e83-8f0f-0bd9099185e9_400x.jpg?v=1645878093",image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5707_400x.jpg?v=1641468153",review:"12 reviews",mrp:"MRP ₹ 450.00",del:"" },
       {id:18, name:"Rose Glow Serum", image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Rose-Glow_400x.jpg?v=1647864704",image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5707_400x.jpg?v=1641468153",review:"17 reviews",mrp:"MRP ₹ 730.00",del:"" },
       {id:19, name:"Shea Saffron Bath Bar", image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/SheaSaffronBathBar_400x.jpg?v=1647864001",image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5707_400x.jpg?v=1641468153",review:"21 reviews",mrp:"MRP ₹ 390.00",del:"" },
-      {id:20, name:"Turmeric Healing Face Mask", image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Turmerichealing_400x.jpg?v=1647864335",image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5707_400x.jpg?v=1641468153",review:"23 reviews",mrp:"MRP ₹600.00",del:"" },
+      {id:20, name:"Turmeric Healing Face Mask", image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Turmerichealing_400x.jpg?v=1647864335",image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5707_400x.jpg?v=1641468153",review:"23 reviews",mrp:"MRP ₹ 600.00",del:"" },
       {id:21, name:"Body Scrub", image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/BodyScrub_400x.jpg?v=1647862779",image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5707_400x.jpg?v=1641468153",review:"9 reviews",mrp:"MRP ₹ 450.00",del:"" },
       {id:22, name:"Rose & Geranium Body Butter", image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/ROSE_20__20GERANIUM_20BODY_20BUTTER_400x.jpg?v=1641031579",image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5707_400x.jpg?v=1641468153",review:"24 reviews",mrp:"MRP ₹ 550.00",del:"" },
       {id:23, name:"Basil Toner", image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Basil_400x.jpg?v=1647862013",image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5707_400x.jpg?v=1641468153",review:"25 reviews",mrp:"MRP ₹ 490.00",del:"" },
@@ -317,7 +317,7 @@ parent.innerHTML=null;
 
 cardarry.forEach(function(elem){
     
-    div=document.createElement("div")
+    let div=document.createElement("div")
     div.setAttribute("class",("upper_container"))
 
     let myDiv = document.createElement("div")
@@ -332,14 +332,14 @@ cardarry.forEach(function(elem){
         window.location.href="./../particularProduct.html"
     })
     
-    names=document.createElement("div")
+    let names=document.createElement("div")
     names.innerText=elem.name;
     names.style.fontSize="17px"
     names.style.color="#000000"
     
-    console.log(elem.name)
+    //console.log(elem.name)
 
-    imgs=document.createElement("img")
+    let imgs=document.createElement("img")
     imgs.src=elem.image;
     imgs.setAttribute("id","pic")
  
@@ -359,10 +359,10 @@ function () {
     //stuff to do on mouse leave
     imgs.src = elem.image;
 });
-    div1=document.createElement("div")
+    let div1=document.createElement("div")
      div1.setAttribute("id","stardiv")
    
-    wish=document.createElement("i")
+    let wish=document.createElement("i")
     wish.setAttribute("class","fa fa-heart-o")
     wish.setAttribute("id","suraj")
     wish.style.fontSize="28px";
@@ -374,38 +374,38 @@ function () {
 
 
 
-    reiv=document.createElement("div")
+    let reiv=document.createElement("div")
     reiv.innerText=elem.review;
     reiv.style.marginLeft="2px"
     
-    rate=document.createElement("span")
+    let rate=document.createElement("span")
     rate.setAttribute("class","fa fa-star checked");
 
-    rate2=document.createElement("span")
+    let rate2=document.createElement("span")
     rate2.setAttribute("class","fa fa-star checked");
 
-    rate3=document.createElement("span")
+    let rate3=document.createElement("span")
     rate3.setAttribute("class","fa fa-star checked");
 
-    rate4=document.createElement("span")
+    let rate4=document.createElement("span")
     rate4.setAttribute("class","fa fa-star checked");
 
-    rate5=document.createElement("span")
+    let rate5=document.createElement("span")
     rate5.setAttribute("class","fa fa-star checked");
 
-    div2=document.createElement("div")
+    let div2=document.createElement("div")
     div2.setAttribute("id","priceAndDel")
     
 
-    mrp=document.createElement("div")
+    let mrp=document.createElement("div")
     mrp.setAttribute("id","price")
     mrp.innerText=elem.mrp;
 
-    del=document.createElement("del")
+    let del=document.createElement("del")
     del.innerText=elem.del;
     del.style.marginLeft="20px";
 
-    cart=document.createElement("button");
+    let cart=document.createElement("button");
     cart.innerText="Add To Cart";
     cart.setAttribute("class","cart_button")
    
@@ -421,6 +421,7 @@ function () {
     parent.append(div)
 })
 }
+
 displaydata(cardarry)
 
 // function hey(elem){
@@ -437,6 +438,120 @@ let productInfo = (elem)=>{
      localStorage.setItem("qty",count)
     localStorage.setItem("particularPro",JSON.stringify(elem));
 }
+
+
+function sortItems(){
+    var sorting = document.querySelector("#cars").value;
+    //console.log(sorting)
+
+   if(sorting=="Puja"){
+        cardarry.sort((a, b) => {
+            let fa = a.name.toLowerCase(),
+            fb = b.name.toLowerCase();
+
+            if (fa < fb) {
+                return -1;
+            }
+            if (fa > fb) {
+                return 1;
+            }
+            return 0;
+        });
+        displaydata(cardarry);
+   }
+
+   if(sorting=="Ajay"){
+        cardarry.sort((a, b) => {
+            let fa = a.name.toLowerCase(),
+            fb = b.name.toLowerCase();
+
+            if (fa < fb) {
+                return 1;
+            }
+            if (fa > fb) {
+                return -1;
+            }
+            return 0;
+        });
+        displaydata(cardarry);
+   }
+    
+   if(sorting=="Mohit"){
+        function swap(cardarry,a,b){
+        let temp = cardarry[a]
+        cardarry[a] = cardarry[b];
+        cardarry[b] = temp
+        }
+
+        for(let i=0;i<cardarry.length;i++){
+        for(let j=0;j<cardarry.length-i-1;j++){
+        
+            let a = +cardarry[j].mrp.slice(6,cardarry[j].mrp.length-2)
+            let b = +cardarry[j+1].mrp.slice(6,cardarry[j+1].mrp.length-2)
+            
+            if(a>b){
+            
+            swap(cardarry,j,j+1)
+            }
+           }
+        }
+        //console.log(cardarry)
+        //console.log(arr);
+
+        displaydata(cardarry);
+   }
+   if(sorting=="Shubham"){
+        function swap(cardarry,a,b){
+        let temp = cardarry[a]
+        cardarry[a] = cardarry[b];
+        cardarry[b] = temp
+        }
+
+        for(let i=0;i<cardarry.length;i++){
+        for(let j=0;j<cardarry.length-i-1;j++){
+        
+            let a = +cardarry[j].mrp.slice(6,cardarry[j].mrp.length-2)
+            let b = +cardarry[j+1].mrp.slice(6,cardarry[j+1].mrp.length-2)
+            
+            if(a<b){
+            
+            swap(cardarry,j,j+1)
+            }
+           }
+        }
+        //console.log(cardarry)
+        //console.log(arr);
+
+        displaydata(cardarry);
+   }
+   
+   if(sorting=="Suraj"){
+        function swap(cardarry,a,b){
+        let temp = cardarry[a]
+        cardarry[a] = cardarry[b];
+        cardarry[b] = temp
+        }
+
+        for(let i=0;i<cardarry.length;i++){
+        for(let j=0;j<cardarry.length-i-1;j++){
+        
+            let a = +cardarry[j].review.slice(0,cardarry[j].review.length-7)
+            let b = +cardarry[j+1].review.slice(0,cardarry[j+1].review.length-7)
+            
+            if(a<b){
+            
+            swap(cardarry,j,j+1)
+            }
+           }
+        }
+        //console.log(cardarry)
+        //console.log(arr);
+
+        displaydata(cardarry);
+   }
+};
+
+
 
 
 
