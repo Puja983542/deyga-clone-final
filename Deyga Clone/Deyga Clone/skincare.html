@@ -312,7 +312,9 @@ cardarry.forEach(function(elem){
     let myDiv = document.createElement("div")
 
     myDiv.addEventListener("click",()=>{
-        window.location.href="./../payment.html"
+        
+        productInfo(elem)
+        window.location.href="./../particularProduct.html"
     })
 
     names=document.createElement("div")
@@ -403,8 +405,12 @@ function () {
 }
 displaydata(cardarry)
 
-
-
+let count = 1;
+let productInfo = (elem)=>{
+    
+     localStorage.setItem("qty",count)
+    localStorage.setItem("particularPro",JSON.stringify(elem));
+}
 </script>
 
 
