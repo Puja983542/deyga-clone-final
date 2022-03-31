@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>SkinCare Page</title>
     <link rel="stylesheet" href="./styles/navbar_footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,7 +16,7 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
 <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
     integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
@@ -41,9 +41,9 @@
         }
         #middle_container{
             display: grid;
-            grid-template-columns: repeat(4,22%);
-            gap: 30px;
-            width: 95%;
+            grid-template-columns: repeat(4,23%);
+            gap: 10px;
+            width: 90%;
             justify-content: space-between;
             border: 1px solid black;
             margin: auto;
@@ -51,30 +51,45 @@
         body{
             overflow-x: hidden;
         }
-        #middle_container>div>img{
+
+        /* mainImg */
+        #middle_container>div>div>img{
             width: 280px;
             height: 340px;
             margin: 10px;
             border-radius: 7px;
             
         }
-        #middle_container>div>div{
+        /* div1,div2 */
+        #middle_container>div>div>div{
             display: flex;
-            
-            margin-top: 10px;
+          
             width: 70%;
             margin-left: 70px;
             
         }
+        /* addToCart btn */
         .cart_button{
             height: 40px;
             width:100px;
             background-color: white;
             border-radius: 5px;
             margin-top: 20px;
-           
-          
+            border: 2px solid black;
+            border-radius: 45px;
+            width: 150px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+         
         }
+        .cart_button:hover{
+               background-color: black;
+               color: white;
+               border-radius: 45px;
+        }
+        /* div */
         .upper_container{
          
             position: relative;
@@ -85,23 +100,16 @@
             box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
             border-radius: 7px;
         }
-        .cart_button{
-            border: 2px solid black;
-            border-radius: 45px;
-            width: 150px;
-            margin-bottom: 20px;
-        }
-        .cart_button:hover{
-               background-color: black;
-               color: white;
-               border-radius: 45px;
-        }
-        #wish{
+      
+        
+        /* #wish{
            
             width: 40px;
             height: 30px;
             
-        }
+        } */
+        
+        /* heartIcon */
         i{
             width: 40px;
             height: 40px;
@@ -146,6 +154,42 @@
             height: 40px;
             width: 80px;
         }
+
+        /* div2 */
+        #priceAndDel{
+          margin-top: -1px;
+          font-size: 13px;
+        }
+
+        /* div1 */
+        #stardiv{
+            margin-top: 7px;
+        }
+        /* review */
+        #stardiv>div{
+            margin-top: -3px;
+        }
+        /* price */
+        #priceAndDel>div{
+            margin-right: -13px
+        }
+        /* del */
+        del{
+            margin-left: -3px;
+            color: #737373;
+            font-weight: 600;
+        }
+        /* heartIcon */
+        #suraj{
+            /* background-color: deeppink; */
+            padding-top: 6px;
+        }
+        /* mainImg */
+       #pic{
+           width: 90%;
+           margin-right: 5px;
+       }
+      
     </style>
 </head>
 <body>
@@ -261,16 +305,29 @@ function displaydata(cardarry){
 parent.innerHTML=null;
 
 cardarry.forEach(function(elem){
+    
     div=document.createElement("div")
     div.setAttribute("class",("upper_container"))
 
-    names=document.createElement("h4")
+    let myDiv = document.createElement("div")
+
+    myDiv.addEventListener("click",()=>{
+        
+        productInfo(elem)
+        window.location.href="./../particularProduct.html"
+    })
+
+    names=document.createElement("div")
     names.innerText=elem.name;
+    names.style.fontSize="17px"
+    names.style.color="#000000"
+    
     console.log(elem.name)
 
     imgs=document.createElement("img")
     imgs.src=elem.image;
     imgs.setAttribute("id","pic")
+ 
     // $(imgs).hover(function () {
            
     //        imgs.src = elem.image2;
@@ -288,7 +345,7 @@ function () {
     imgs.src = elem.image;
 });
     div1=document.createElement("div")
-
+     div1.setAttribute("id","stardiv")
    
     wish=document.createElement("i")
     wish.setAttribute("class","fa fa-heart-o")
@@ -299,9 +356,9 @@ function () {
 
 
 
-    reiv=document.createElement("p")
+    reiv=document.createElement("div")
     reiv.innerText=elem.review;
-    reiv.style.marginLeft="20px"
+    reiv.style.marginLeft="2px"
     
     rate=document.createElement("span")
     rate.setAttribute("class","fa fa-star checked");
@@ -319,9 +376,11 @@ function () {
     rate5.setAttribute("class","fa fa-star checked");
 
     div2=document.createElement("div")
+    div2.setAttribute("id","priceAndDel")
     
 
-    mrp=document.createElement("p")
+    mrp=document.createElement("div")
+    mrp.setAttribute("id","price")
     mrp.innerText=elem.mrp;
 
     del=document.createElement("del")
@@ -331,23 +390,27 @@ function () {
     cart=document.createElement("button");
     cart.innerText="Add To Cart";
     cart.setAttribute("class","cart_button")
-
+   
+    
+    
    // divwish.append(wish)
     div1.append(rate,rate2,rate3,rate4,rate5,reiv)
     
     div2.append(mrp,del)
-    div.append(imgs,wish,names,div1,div2,cart)
+    myDiv.append(imgs,wish,names,div1,div2)
+    div.append(myDiv,cart)
+    // div.append(imgs,wish,names,div1,div2,cart)
     parent.append(div)
 })
 }
 displaydata(cardarry)
 
-// function filhal(imgs,dusra){
-//    document.querySelector("#pic").src=dusra
-// }
-// function chlaja(imgs,phla){
-//     document.querySelector("#pic").src=phla
-// }
+let count = 1;
+let productInfo = (elem)=>{
+    
+     localStorage.setItem("qty",count)
+    localStorage.setItem("particularPro",JSON.stringify(elem));
+}
 </script>
 
 
