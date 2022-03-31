@@ -44,10 +44,36 @@
     let particularPro = JSON.parse(localStorage.getItem("particularPro"));
 
     document.getElementById('productName').innerText = particularPro.name;
+
+    let imagesArr = [particularPro.image,particularPro.image2];
      
     let particularImg = document.createElement("img");
-    particularImg.src = particularPro.image
+    particularImg.src = imagesArr[0];
+
+    
+
+   
+    particularImg.setAttribute("id","image")
     document.getElementById("particularLeft").append(particularImg)
+   
+    let i=1;       
+    setInterval(function(){
+    
+        if(i===imagesArr.length){
+            i=0;
+        }
+        let image = imagesArr[i];
+        
+        let img = document.getElementById("image");
+        img.src=image;
+        
+        i++;
+    },1000);
+
+
+
+
+    
 
     let title = document.createElement("div");
     title.innerText = particularPro.name;
