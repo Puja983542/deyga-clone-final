@@ -321,13 +321,17 @@ cardarry.forEach(function(elem){
     div.setAttribute("class",("upper_container"))
 
     let myDiv = document.createElement("div")
+    myDiv.setAttribute("id","gotoparticulatpage")
+    // myDiv.addEventListener("click",()=>{
+    //     hey(elem)
+    // })
 
     myDiv.addEventListener("click",()=>{
         
         productInfo(elem)
         window.location.href="./../particularProduct.html"
     })
-
+    
     names=document.createElement("div")
     names.innerText=elem.name;
     names.style.fontSize="17px"
@@ -363,6 +367,9 @@ function () {
     wish.setAttribute("id","suraj")
     wish.style.fontSize="28px";
      wish.style.border="1px solid white"
+     wish.addEventListener("click",()=>{
+         window.location.href = "./../blogpage.html"
+     })
     // wish.style.color="white"
 
 
@@ -416,12 +423,24 @@ function () {
 }
 displaydata(cardarry)
 
+// function hey(elem){
+//     document.getElementById('gotoparticulatpage').addEventListener("click",()=>{
+//     productInfo(elem)
+//     window.location.href="./../particularProduct.html"
+// })
+// }
+
+
 let count = 1;
 let productInfo = (elem)=>{
     
      localStorage.setItem("qty",count)
     localStorage.setItem("particularPro",JSON.stringify(elem));
 }
+
+
+
+
 </script>
 
 
