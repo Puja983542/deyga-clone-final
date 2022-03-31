@@ -171,14 +171,17 @@ data.map((elem)=>{
     var date = document.createElement("p");
     date.innerText=elem.date;
     date.style.color="#929fac";
-    var header = document.createElement("h5");
+    var header = document.createElement("div");
     header.innerText=elem.header;
+    header.style.fontSize="12px"
     var para = document.createElement("p");
     para.innerText = elem.para;
     para.style.color="#929fac";
+    para.style.fontSize="13px"
     var ancor = document.createElement("a");
     ancor.innerText="Read More";
     ancor.style.color="grey";
+    ancor.style.fontSize = "13px"
     ancor.setAttribute("id","blogancor1");
     div1.append(image)
     div.append(div1 ,date,header,para,ancor);
