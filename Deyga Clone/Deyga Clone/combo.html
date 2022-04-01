@@ -167,11 +167,11 @@ cardarry.forEach(function(elem){
     //     hey(elem)
     // })
 
-    myDiv.addEventListener("click",()=>{
+    // myDiv.addEventListener("click",()=>{
         
-        productInfo(elem)
-        window.location.href="./../particularProduct.html"
-    })
+    //     productInfo(elem)
+    //     window.location.href="./../particularProduct.html"
+    // })
 
     names=document.createElement("p")
     names.setAttribute("class","namess") 
@@ -210,7 +210,7 @@ function () {
     wish.style.fontSize="28px";
      wish.style.border="1px solid white"
      wish.addEventListener("click",()=>{
-         window.location.href = "./../blogpage.html"
+        
      });
 
 
@@ -267,12 +267,12 @@ function () {
 displaydata(cardarry)
 
 
-let count = 1;
-let productInfo = (elem)=>{
+// let count = 1;
+// let productInfo = (elem)=>{
     
-     localStorage.setItem("qty",count)
-    localStorage.setItem("particularPro",JSON.stringify(elem));
-}
+//      localStorage.setItem("qty",count)
+//     localStorage.setItem("particularPro",JSON.stringify(elem));
+// }
 
 
 function sortItems(){
@@ -406,3 +406,4 @@ function addToCartFunction(elem){
 }
 
 </script>
+
