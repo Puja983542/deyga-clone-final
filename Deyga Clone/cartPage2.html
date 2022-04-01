@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="./styles/navbar_footer.css">
+    <link rel="stylesheet" href="./styles/cart.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="cartpagediv1">Cart</div>
+     <div id="cartpagediv2">
+         <div>Product</div>
+         <div>Quantity</div>
+         <div>Total</div>
+     </div>
+     <hr/>
+    
+     <div id="cartMainContainer"></div>
+     <hr/>
+
+     <div id="finalDivOfCartPage">
+         <div>
+             <div>Add Order Note</div>
+             <input type="text" placeholder="How can we help you?"/>
+         </div>
+         <div>
+             <div>
+                 <div>Total: Rs.</div>
+                 <div>price</div>
+             </div>
+             <div>Shipping & taxes calculated at checkout</div>
+             <button>checkout</button>
+         </div>
+     </div>
+
+    <div id="footer"></div>
+    
+</body>
+</html>
+
+<script type="module">
+
+    import {navbar,footer} from "./components/navbar.js"
+    document.getElementById('navbar').innerHTML=navbar();
+    document.getElementById('footer').innerHTML = footer();
+
+    import {navbarJs} from "./scripts/navbarJsPart.js"
+    navbarJs();
+    
+</script>
+<script type="module">
+
+    let cartItemsArr = JSON.parse(localStorage.getItem("cart")) || [];
+    //console.log(cartItemsArr)
+
+    const cartDisplay = (cartItemsArr)=>{
+        document.getElementById('cartMainContainer').innerHTML = null;
+
+        cartItemsArr.map((el)=>{
+
+            let cartDiv = document.createElement("div");
+
+            let productImg = document.createElement("img");
+            productImg.src = el.image;
+
+            let nameAndPriceDiv = document.createElement("div");
+
+            let title = document.createElement("div");
+            title.innerText = el.name;
+
+            let price1 = el.mrp.slice(6,el.mrp.length-3);
+            let price = document.createElement("div");
+            price.innerText = `Rs. ${price1}`;
+            //console.log(price.innerText.slice(4,price.innerText.length));
+
+            nameAndPriceDiv.append(title,price);
+            
+            let QuantityAndRemoveDiv = document.createElement("div");
+
+            let QuantityDiv = document.createElement("div");
+
+            let decdiv = document.createElement("div");
+            decdiv.innerText = "-"
+            let Quantity = document.createElement("div");
+            Quantity.innerText = el.quantity;
+            let incdiv = document.createElement("div");
+            incdiv.innerText = "+"
+
+            QuantityDiv.append(decdiv,Quantity,incdiv)
+
+            let removeDiv = document.createElement("div");
+            removeDiv.innerText = "Remove"
+            removeDiv.addEventListener("click",()=>{
+                deleteProductFromCart(el.id);
+            })
+
+            QuantityAndRemoveDiv.append(QuantityDiv,removeDiv)
+
+            let totalPriceDiv = document.createElement("div");
+            let rs = document.createElement("div");
+            rs.innerText = "Rs.";
+            let priceWithQuantity = document.createElement("div");
+            priceWithQuantity.innerText = price1;
+
+            totalPriceDiv.append(rs,priceWithQuantity)
+
+
+            cartDiv.append(productImg,nameAndPriceDiv,QuantityAndRemoveDiv,totalPriceDiv);
+            document.getElementById('cartMainContainer').append(cartDiv);
+
+        })
+
+    }
+
+   cartDisplay(cartItemsArr)
+
+   
+   const deleteProductFromCart = (id)=>{
+
+      let filteredArr = JSON.parse(localStorage.getItem("cart")) || [];
+
+      let deletedArr = filteredArr.filter((el)=>{
+          return el.id!=id;
+      })
+
+      
+      localStorage.setItem("cart",JSON.stringify(deletedArr));
+      cartDisplay(deletedArr);
+   }
+
+</script>
+
+
+
+
