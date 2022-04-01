@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/navbar_footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles/products.css">
+
+   
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+    
+    <div id="navbar"></div>
+    <div id="backhome"><a href="homepage.html">Home > Skin Care</a></div>
+     <div class="upperimage">
+         <h2 class="title">Skin Care</h1>
+        
+     </div>
+ 
+     <hr style="margin-bottom: 5%;">
+     <div class="short">
+         <select name="cars" id="cars" onchange="sortItems()">
+             <option value="Kalyani">Short</option>
+             <option value="Suraj">Best Seller </option>
+             <option value="Puja">Alphabetically A-Z</option>
+             <option value="Ajay">Alphabetically Z-A</option>
+             <option value="Shubham">Price-High to Low</option>
+             <option value="Mohit">Price-Low to High</option>
+           </select>
+     </div>
+     <hr>
+    
+ <div id="middle_container" ></div>
+
+ <div id="footer"></div>
+</body>
+</html>
+<script type="module">
+
+    import {navbar,footer} from "./components/navbar.js"
+    document.getElementById('navbar').innerHTML=navbar();
+    document.getElementById('footer').innerHTML = footer();
+
+    import {navbarJs} from "./scripts/navbarJsPart.js"
+    navbarJs();
+    
+    
+</script>
