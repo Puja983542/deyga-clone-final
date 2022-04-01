@@ -29,7 +29,7 @@
          <div>
              <div>
                  <div>Total: Rs.</div>
-                 <div>price</div>
+                 <div id="showTotalPrice">price</div>
              </div>
              <div>Shipping & taxes calculated at checkout</div>
              <button>checkout</button>
@@ -84,10 +84,19 @@
 
             let decdiv = document.createElement("div");
             decdiv.innerText = "-"
+            decdiv.addEventListener("click",()=>{
+                decquantity(el);
+            })
+
             let Quantity = document.createElement("div");
             Quantity.innerText = el.quantity;
+            Quantity.setAttribute("id","qty")
+
             let incdiv = document.createElement("div");
             incdiv.innerText = "+"
+            incdiv.addEventListener("click",()=>{
+                incquantity(el);
+            })
 
             QuantityDiv.append(decdiv,Quantity,incdiv)
 
@@ -103,7 +112,7 @@
             let rs = document.createElement("div");
             rs.innerText = "Rs.";
             let priceWithQuantity = document.createElement("div");
-            priceWithQuantity.innerText = price1;
+            priceWithQuantity.innerText = (el.quantity)*(price1);
 
             totalPriceDiv.append(rs,priceWithQuantity)
 
@@ -117,19 +126,61 @@
 
    cartDisplay(cartItemsArr)
 
+   let totalPrice = cartItemsArr.reduce((acc,ele)=>{
+          return acc+((ele.quantity)*(ele.mrp.slice(6,ele.mrp.length-3)))
+    },0)
+
+     document.getElementById('showTotalPrice').innerText = totalPrice;
+
    
    const deleteProductFromCart = (id)=>{
 
       let filteredArr = JSON.parse(localStorage.getItem("cart")) || [];
 
       let deletedArr = filteredArr.filter((el)=>{
+         document.getElementById('showTotalPrice').innerText = totalPrice-el.quantity*(el.mrp.slice(6,el.mrp.length-3))
           return el.id!=id;
       })
 
       
       localStorage.setItem("cart",JSON.stringify(deletedArr));
       cartDisplay(deletedArr);
+
+     // document.getElementById('showTotalPrice').innerText = totalPrice
+
    }
+
+
+   let incquantity=(ele)=>{
+       
+        ele.quantity++;
+        let target = cartItemsArr.map(el=>el.id == ele.id?{...el,quantity:ele.quantity++}:el)
+        localStorage.setItem("cart",JSON.stringify(target))
+        cartDisplay(target);
+
+        let totalPrice = target.reduce((acc,ele)=>{
+          return acc+((ele.quantity)*(ele.mrp.slice(6,ele.mrp.length-3)))
+        },0)
+
+        document.getElementById('showTotalPrice').innerText = totalPrice;
+   }
+   
+    let decquantity = (ele)=>{
+        if(ele.quantity>=2){
+          ele.quantity--;
+       }
+        let target = cartItemsArr.map(el=>el.id == ele.id?{...el,quantity:ele.quantity++}:el)
+        localStorage.setItem("cart",JSON.stringify(target))
+        cartDisplay(target);
+
+        let totalPrice = target.reduce((acc,ele)=>{
+          return acc+((ele.quantity)*(ele.mrp.slice(6,ele.mrp.length-3)))
+        },0)
+
+        document.getElementById('showTotalPrice').innerText = totalPrice;
+    }     
+      
+    
 
 </script>
 
