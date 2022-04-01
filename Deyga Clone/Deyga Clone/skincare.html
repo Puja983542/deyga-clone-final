@@ -558,11 +558,24 @@ function sortItems(){
 
 
 function addToCartFunction(elem){
-    elem.quantity = 1;
-    //console.log(elem.quantity);
+     let maintainDuplicateArr = JSON.parse(localStorage.getItem("cart")) || [];
+     //if(maintainDuplicateArr.inc)
+     let flag = false;
+     for(let i=0;i<maintainDuplicateArr.length;i++){
+         if(elem.id==maintainDuplicateArr[i].id){
+             flag=true;
+         }
+     }
 
-    cartProductsArr.push(elem);
-    localStorage.setItem("cart",JSON.stringify(cartProductsArr));
+     if(flag==false){
+
+        //old
+        elem.quantity = 1;
+        //console.log(elem.quantity);
+
+        cartProductsArr.push(elem);
+        localStorage.setItem("cart",JSON.stringify(cartProductsArr));
+     }
 }
 
 
