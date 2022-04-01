@@ -310,7 +310,9 @@
 
     ]
 
-parent=document.querySelector("#middle_container")
+let parent=document.querySelector("#middle_container")
+
+let cartProductsArr = JSON.parse(localStorage.getItem("cart")) || [];
 
 function displaydata(cardarry){
 parent.innerHTML=null;
@@ -408,7 +410,10 @@ function () {
     let cart=document.createElement("button");
     cart.innerText="Add To Cart";
     cart.setAttribute("class","cart_button")
-   
+    cart.addEventListener("click",()=>{
+        addToCartFunction(elem);
+        window.location.href="./../cartPage2.html"
+    })
     
     
    // divwish.append(wish)
@@ -553,7 +558,13 @@ function sortItems(){
 
 
 
+function addToCartFunction(elem){
+    elem.quantity = 1;
+    //console.log(elem.quantity);
 
+    cartProductsArr.push(elem);
+    localStorage.setItem("cart",JSON.stringify(cartProductsArr));
+}
 
 
 </script>
