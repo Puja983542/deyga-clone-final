@@ -132,6 +132,13 @@
 
      document.getElementById('showTotalPrice').innerText = totalPrice;
 
+     let totalquantityofcartproducts = cartItemsArr.reduce((acc,ele)=>{
+           return acc+(ele.quantity);
+     },0)
+
+     document.getElementById('countCartItems').innerText = totalquantityofcartproducts
+    
+
    
    const deleteProductFromCart = (id)=>{
 
@@ -139,14 +146,15 @@
 
       let deletedArr = filteredArr.filter((el)=>{
          document.getElementById('showTotalPrice').innerText = totalPrice-el.quantity*(el.mrp.slice(6,el.mrp.length-3))
-          return el.id!=id;
+         document.getElementById('countCartItems').innerText = totalquantityofcartproducts-el.quantity;
+         return el.id!=id;
       })
 
       
       localStorage.setItem("cart",JSON.stringify(deletedArr));
       cartDisplay(deletedArr);
 
-     // document.getElementById('showTotalPrice').innerText = totalPrice
+    
 
    }
 
@@ -163,6 +171,12 @@
         },0)
 
         document.getElementById('showTotalPrice').innerText = totalPrice;
+
+        let totalquantityofcartproducts = target.reduce((acc,ele)=>{
+           return acc+(ele.quantity);
+        },0)
+
+        document.getElementById('countCartItems').innerText = totalquantityofcartproducts
    }
    
     let decquantity = (ele)=>{
@@ -178,6 +192,12 @@
         },0)
 
         document.getElementById('showTotalPrice').innerText = totalPrice;
+
+        let totalquantityofcartproducts = target.reduce((acc,ele)=>{
+           return acc+(ele.quantity);
+        },0)
+
+        document.getElementById('countCartItems').innerText = totalquantityofcartproducts
     }     
       
     
