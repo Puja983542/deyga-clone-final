@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout Page</title>
     <link rel="stylesheet" href="./styles/shipping.css">
+    <!-- <link rel="stylesheet" href="./styles/checkout.css"> -->
 </head>
 <body>
    <div id="CheckoutBodyDiv">
@@ -54,12 +55,83 @@
             <hr style="margin-top: 100px;"/>
             <div>All rights reserved deyga.in</div>
        </div>
-       <div id="CheckoutRight"></div>
+       <div id="CheckoutRight">
+        <div id="onlyProducts"></div>
+        <hr/>
+        <div>
+            <input type="text" placeholder="Gift card or discount code"/>
+            <button>Apply</button>
+        </div>
+        <div id="discountcode">Your discount code - masai30 for 30% discount</div>
+        <hr/>
+        <div id="subtotalprice">
+            <div>Subtotal</div>
+            <div>₹</div>
+            <div></div>
+        </div>
+        <div>
+            <div>Shipping</div>
+            <div>Calculated at next step</div>
+        </div>
+        <hr/>
+        <div id="taxes">
+            <div>Total<p>Including ₹175.54 in taxes</p></div>
+            <div>INR</div>
+            <div>₹</div>
+            <div></div>
+        </div>
+       </div>
    </div>
    <div id="CheckoutRightMost"></div>
    
 </body>
 </html>
+
+<script>
+
+    let informationPageCartArr = JSON.parse(localStorage.getItem("cart")) || [];
+    //console.log(informationPageCartArr);
+
+    function informationDisplay(informationPageCartArr){
+        document.getElementById('onlyProducts').innerHTML = null;
+
+        informationPageCartArr.map((el)=>{
+            let mainbox = document.createElement("div");
+
+            let productImages = document.createElement("img");
+            productImages.src = el.image;
+
+            let quantityInInformationPage = document.createElement("div");
+            quantityInInformationPage.innerText = el.quantity;
+
+
+            let productName = document.createElement("div");
+            productName.innerText = el.name;
+
+            let sym = document.createElement("div");
+            sym.innerText = "₹";
+            let mrp = el.mrp.slice(6,el.mrp.length)
+            let productPrice = document.createElement("div");
+            productPrice.innerText = mrp*el.quantity;
+
+            mainbox.append(productImages,quantityInInformationPage,productName,sym,productPrice);
+            document.getElementById('onlyProducts').append(mainbox)
+        })
+    }
+
+    informationDisplay(informationPageCartArr);
+
+
+  let totalPriceCart = informationPageCartArr.reduce((acc,el)=>{
+      return acc+(el.quantity*(el.mrp.slice(6,el.mrp.length)));
+
+  },0)
+
+  document.querySelector("#taxes>div:last-child").innerText = totalPriceCart;
+  document.querySelector("#subtotalprice>div:last-child").innerText = totalPriceCart
+  
+</script>
+
 
 
 
