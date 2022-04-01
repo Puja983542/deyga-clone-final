@@ -829,3 +829,150 @@ input {
    
 }
 
+/* ---------Award-------------- */
+#AwardContainer{
+    justify-content: center;
+    margin-bottom: 50px;
+}
+#awardImgFlex{
+    display: flex;
+    gap:20px;
+    justify-content: center;
+    
+
+}
+#awardImgFlex>img{
+    width: 300px;
+    height:200px;
+    /* border: 1px solid red; */
+
+}
+
+/* -------------Article----------- */
+
+#IndexArticleContainer{
+    margin-top: 100px;
+}
+
+#ArtParent{
+    display: flex;
+    gap:10px;
+    justify-content: space-around;
+    
+  }
+  #ArtParent>div{
+    width: 30%;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+#ArtParent>div>img{
+    width: 92%;
+    margin: 4%;
+    border-radius: 25px ;
+}
+#artOne{
+    background-color: #F7D9B4;
+}
+#artOne>h4{
+    margin-left: 4%;
+    font-family: sans-serif;
+    /* font-size: 90%; */
+    margin-bottom: 10px;
+}
+#artOne>p{
+    margin-left: 4%;
+    font-family: sans-serif;
+    width: 88%;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 18px;
+}
+#artOne>button{
+    margin-left: 4%;
+    width: 30%;
+    border: 0.5px solid;
+    border-radius: 25px;
+    height: 8%;
+    margin-bottom: 50px;
+    background-color: #F7D9B4;
+    font-weight: 700;
+}
+
+
+#artTwo{
+    background-color: #E8C4A7;
+}
+#artTwo>h4{
+    margin-left: 4%;
+    font-family: sans-serif;
+    /* font-size: 90%; */
+    margin-bottom: 10px;
+}
+#artTwo>p{
+    margin-left: 4%;
+    font-family: sans-serif;
+    width: 88%;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 18px;
+}
+#artTwo>button{
+    margin-left: 4%;
+    width: 30%;
+    border-radius: 25px;
+    border: 0.5px solid;
+    height: 8%;
+    margin-bottom: 50px;
+    background-color: #E8C4A7;
+    font-weight: 700;
+}
+
+#artThree{
+    background-color: #C28F6D;
+    color: white;
+}
+#artThree>h4{
+    margin-left: 4%;
+    font-family: sans-serif;
+   
+    margin-bottom: 10px;
+}
+#artThree>p{
+    margin-left: 4%;
+    font-family: sans-serif;
+    width: 88%;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 18px;
+}
+#artThree>button{
+    margin-left: 4%;
+    width: 30%;
+    border-radius: 25px;
+    border: 0.5px solid;
+    height: 8%;
+    margin-bottom: 50px;
+    background-color: #C28F6D;
+    font-weight: 700;
+    color: white;
+}
+.article{
+    text-align: center;
+    font-family: sans-serif;
+    margin-bottom: 70px;
+    margin-top: 80px;
+}
+
+#parentInstagramFeed
+{
+    margin-top: 100px;
+}
+#SuperStarParentContainer
+{
+    margin-top: 100px;
+}
+#footer{
+    margin-top:100px;
+}
+/* SuperStarParentContainer */
+/* IndexArticleContainer */
