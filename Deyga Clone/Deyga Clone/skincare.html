@@ -340,14 +340,14 @@ cardarry.forEach(function(elem){
     imgs.src=elem.image;
     imgs.setAttribute("id","pic")
  
-    // $(imgs).hover(function () {
+    $(imgs).hover(function () {
            
-    //        imgs.src = elem.image2;
-    //            }, function () {
-    //                // out
-    //                 imgs.src = elem.image;
-    //            }
-    //        );
+           imgs.src = elem.image2;
+               }, function () {
+                   // out
+                    imgs.src = elem.image;
+               }
+            );
            $("#pic").hover(function () {
     //stuff to do on mouse enter
     imgs.src = elem.image2;
