@@ -29,10 +29,10 @@
             </div>
         </div>
         <div>Please fill in the information below:</div>
-        <input type="text" placeholder="First name"/>
-        <input type="text" placeholder="Last name" class="signupInput"/>
-        <input type="email" placeholder="Email" class="signupInput" name="email"/>
-        <input type="password" placeholder="Password" class="signupInput"/>
+        <input type="text" placeholder="First name" id="puja1"/>
+        <input type="text" placeholder="Last name" class="signupInput" id="puja2"/>
+        <input type="email" placeholder="Email" class="signupInput" name="email" id="puja3"/>
+        <input type="password" placeholder="Password" class="signupInput" id="puja4"/>
         <button id="resisterbtn">Create My Account</button>
         
     </div>
@@ -54,6 +54,31 @@
    
 </script>
 
+<script type="module">
 
+    let signupArr = JSON.parse(localStorage.getItem("signup")) || [];
+
+    document.getElementById('resisterbtn').addEventListener("click",()=>{
+
+
+        let fname = document.getElementById("puja1").value;
+        let lname = document.getElementById("puja2").value;
+        let email = document.getElementById("puja3").value;
+        let password = document.getElementById("puja4").value;
+
+        let obj = {
+            fname,
+            lname,
+            email,
+            password
+        }
+
+        signupArr.push(obj);
+        localStorage.setItem("signup",JSON.stringify(signupArr));
+
+    })
+    console.log(signupArr);
+    
+</script>
 
 
