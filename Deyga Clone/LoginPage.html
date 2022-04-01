@@ -29,12 +29,12 @@
             </div>
         </div>
         <div>Please enter your e-mail and password:</div>
-        <input type="email" placeholder="Email" name="email"/>
+        <input type="email" placeholder="Email" name="email" id="loginemail"/>
         <div>
-            <input type="password" placeholder="Password"/>
+            <input type="password" placeholder="Password" id="loginPassword"/>
             <div>Forgot password?</div>
         </div>
-        <button>Login</button>
+        <button id="loginbtn">Login</button>
         <div>
             <div>Don't have an account?</div>
             <div> Create one</div>
@@ -57,6 +57,35 @@
     
     
 </script>
+<script type="module">
+
+    let loginArr = JSON.parse(localStorage.getItem("signup")) || [];
+   // console.log(loginArr)
+    
+   document.getElementById('loginbtn').addEventListener("click",()=>{
+       let loginemail = document.getElementById("loginemail").value;
+       let loginPass = document.getElementById("loginPassword").value;
+
+       let flag = false;
+       for(let i=0;i<loginArr.length;i++){
+           if(loginArr[i].email==loginemail && loginArr[i].password==loginPass){
+               flag = true;
+           }
+       }
+
+       if(flag==true){
+           alert("Login Successful!")
+           window.location.href = "";
+       }
+       else{
+           alert("Login Failed!");
+       }
+   })
+
+
+</script>
+
+
 
 
 
