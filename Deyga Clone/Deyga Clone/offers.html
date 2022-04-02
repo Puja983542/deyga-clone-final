@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/products.css">
-
+    <link rel="stylesheet" href="./styles/card.css">
    
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <style>
@@ -23,24 +23,16 @@
             justify-content: center;
             align-items: center;
         }
-        #recent_container{
-            display: grid;
-            grid-template-columns: repeat(4,23%);
-            gap: 10px;
-            width: 90%;
-            justify-content: space-between;
-            border: 1px solid black;
-            margin: auto;
-        }
+      
     </style>
 </head>
 <body>
     
     <div id="navbar"></div>
-    <div id="backhome"><a href="homepage.html">Home > Skin Care</a></div>
+    <div id="backhome"><a href="homepage.html">Home > Offers</a></div>
 
      <div class="upperimage">
-         <h2 class="title">Skin Care</h1>
+         <h2 class="title">Offers</h1>
          <img class="ppupperimg" src="https://cdn.shopify.com/s/files/1/0034/7901/1441/collections/Banner-01_x600.jpg?v=1648444301%20600w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/Banner-01_800x.jpg?v=1648444301%20800w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/Banner-01_1200x.jpg?v=1648444301%201200w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/Banner-01_1400x.jpg?v=1648444301%201400w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/Banner-01_1600x.jpg?v=1648444301%201600w" >
      </div>
  
@@ -61,7 +53,16 @@
 <hr>
  <div id="middle_container1">Recently viewed</div>
 
- <div id="recent_container"></div>
+ <div id="slider">
+    <div id="sliderappend">
+        <div id="one"></div>
+        <div id="two"></div>
+    </div>
+    <!-- <div id="indicator"> -->
+        <button id="btn1"><</button>
+        <button id="btn2">></button>
+    <!-- </div> -->
+</div>
 
  <div id="footer"></div>
 </body>
@@ -402,14 +403,5 @@ function addToCartFunction(elem){
      }
 }
 </script>
-<script>
-    recentArray=[{id:"1", name:"Charcol Detox Face mask",review:"7 reviews",mrp:"MRP ₹ 600.00",del:"",image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Charcoal-Detoxmas_400x.jpg?v=1647862612",image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Charcoal-Detoxmas_400x.jpg?v=1647862612"},
-    {id:"2", name:"Rose Scrub",review:"9 reviews",mrp:"MRP ₹ 570.00",del:"",image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Rose_1_400x.jpg?v=1647863167",image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6222_400x.jpg?v=1647863167"},
-    {id:"3", name:"Mint Lip Scrub",review:"8 reviews",mrp:"MRP ₹ 249.00",del:"₹290.00",image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Mint_400x.jpg?v=1647863062",image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6498_400x.jpg?v=1647863062"},
-    {id:"4", name:"Anti Aging Serum",review:"11 reviews",mrp:"MRP ₹730.00",del:"",image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Anti-Ageing_400x.jpg?v=1647864574",image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5067_400x.jpg?v=1647864574"},
-    {id:"5", name:"Neem and Turmeric Bath Bar",review:"10 reviews",mrp:"MRP ₹ 270.00",del:"₹320.00",image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/NeemandTurmericBathBar_400x.jpg?v=1647863923",image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Untitled-2_5857b203-f8e2-447f-879e-b2c279bd44cd_400x.png?v=1647863923"},
-    {id:"6", name:"Tea Tree Essential Oil",review:"13 reviews",mrp:"MRP ₹ 350.00",del:"",image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/TeaTree_1_400x.jpg?v=1647865211",image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6545_400x.jpg?v=1647865211"},
-    {id:"7", name:"Lemon Mist",review:"9 reviews",mrp:"MRP ₹ 490.00",del:"",image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Lemon_400x.jpg?v=1647862222",image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5458_400x.jpg?v=1647862222"},
-    {id:"8", name:"Chocolate Body Butter",review:"7 reviews",mrp:"MRP ₹ 550",del:"",image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/CHOCOLATE_20BODY_20BUTTER_400x.jpg?v=1641031450",image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5646_400x.jpg?v=1641031450"},
-    ]
-</script>
+
+<script src="./scripts/card.js"></script>

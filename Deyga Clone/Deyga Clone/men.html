@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/products.css">
+    <link rel="stylesheet" href="./styles/card.css">
 
    
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
@@ -16,9 +17,9 @@
 <body>
     
     <div id="navbar"></div>
-    <div id="backhome"><a href="homepage.html">Home > Skin Care</a></div>
+    <div id="backhome"><a href="homepage.html">Home > Men</a></div>
      <div class="upperimage">
-         <h2 class="title">Skin Care</h1>
+         <h2 class="title">Men</h1>
         
      </div>
  
@@ -37,6 +38,20 @@
     
  <div id="middle_container" ></div>
 
+ <hr>
+ <div id="middle_container1">Recently viewed</div>
+
+ <div id="slider">
+    <div id="sliderappend">
+        <div id="one"></div>
+        <div id="two"></div>
+    </div>
+    <!-- <div id="indicator"> -->
+        <button id="btn1"><</button>
+        <button id="btn2">></button>
+    <!-- </div> -->
+</div>
+
  <div id="footer"></div>
 </body>
 </html>
@@ -51,7 +66,7 @@
     
     
 </script>
-<script>
+<script >
      let cardarry = [
         {id:1, name:"Charcoal Bath Bar",
         image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/ICONS-05_400x.jpg?v=1648210587",
@@ -78,7 +93,6 @@
         image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5188_b352b249-6408-4003-bd92-e9f4be1f8dbc_400x.jpg?v=1642512099",
         review:"4 reviews",mrp:"MRP ₹ 249.00",del:"₹290.00" },
    ];
-
    let parent=document.querySelector("#middle_container");
 
 let cartProductsArr = JSON.parse(localStorage.getItem("cart")) || [];
@@ -335,5 +349,7 @@ function addToCartFunction(elem){
         localStorage.setItem("cart",JSON.stringify(cartProductsArr));
      }
 }
+  
 
 </script>
+<script src="./scripts/card.js"></script>
