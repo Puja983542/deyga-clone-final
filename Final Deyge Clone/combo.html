@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bath & Body</title>
+    <title>Combo Page</title>
     <link rel="stylesheet" href="./styles/navbar_footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,9 +17,9 @@
 <body>
     
     <div id="navbar"></div>
-    <div id="backhome"><a href="index.html">Home >Bath & Body</a></div>
+    <div id="backhome"><a href="index.html">Home > Combo</a></div>
      <div class="upperimage">
-         <h2 class="title">Bath & Body</h1>
+         <h2 class="title">Combo</h1>
         
      </div>
  
@@ -36,7 +36,7 @@
      </div>
      <hr>
     
- <div id="middle_container" ></div>
+ <div id="middle_container"></div>
 
  <hr>
  <div id="middle_container1">Recently viewed</div>
@@ -67,36 +67,106 @@
     
 </script>
 <script>
-     let cardarry = [
-        {id:1, name:"Charcoal Bath Bar",
-        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/ICONS-05_400x.jpg?v=1648210587",
-        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Charcoal-soap_400x.jpg?v=1648210587",
-        review:"566 reviews",mrp:"MRP ₹ 349.00",del:"₹410.00" },
-        {id:2, name:"Coconut Milk Shampoo Bar",
-        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Shampoo-Bar_400x.jpg?v=1647864464",
-        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Shampoo-Bar_400x.jpg?v=1647864464",
-        review:"62 reviews",mrp:"MRP ₹ 390.00",del:"" },
-        {id:3, name:"Shea Saffron Bath Bar",
-        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/SheaSaffronBathBar_400x.jpg?v=1647864001",
-        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/SheaSaffronBathBar_400x.jpg?v=1647864001",
-        review:"21 reviews",mrp:"MRP ₹ 390.00",del:"" },
-        {id:4, name:"Body Scrub",
-        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/BodyScrub_400x.jpg?v=1647862779",
-        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6336_400x.jpg?v=1647862779",
-        review:"9 reviews",mrp:"MRP ₹ 450.00",del:"" },
-        {id:5, name:"Loofah",
-        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Shoot_3_4_1000x1000_ee8c9638-79ac-4a9a-bbc1-36f7ab80b3f5_400x.jpg?v=1641031536",
-        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Shoot_3_4_1000x1000_ee8c9638-79ac-4a9a-bbc1-36f7ab80b3f5_400x.jpg?v=1641031536",
-        review:"14 reviews",mrp:"MRP ₹ 50.00",del:"" },
-        {id:6, name:"Baby Bath Bar",
-        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/BabyBathBar_400x.jpg?v=1647863891",
-        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Baby_Soap_c52c3f11-1708-4a04-afd4-c051e9e5b252_400x.jpg?v=1647863891",
-        review:"7 reviews",mrp:"MRP ₹ 390.00",del:"" },
+    
+   let cardarry = [
+        {id:1, name:"Nourished Lips Combo",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Nourished_20Lips_20Combo_20_1_904x1156_1_400x.jpg?v=1641839189",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Nourished_20Lips_20Combo_904x1156_1_400x.jpg?v=1641839189",
+        review:"31 reviews",mrp:"MRP ₹ 479.00",del:"₹580.00" },
+        {id:2, name:"Clear Skin Combo",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Clear_20Skin_20Combo_20_1_904x11562_400x.jpg?v=1642793784",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/ClearSkinCombo_400x.jpg?v=1642793784",
+        review:"48 reviews",mrp:"MRP ₹ 729.00",del:"₹800.00" },
+        {id:3, name:"Hydro Boosting Combo",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/NightCombo-edited_400x.jpg?v=1644841165",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/NightCombo-edited_400x.jpg?v=1644841165",
+        review:"4 reviews",mrp:"MRP ₹ 780.00",del:"₹980.00" },
+        {id:4, name:"Hair Strengthening Combo",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Hair_20Strengthening_20Combo_20_1_400x.jpg?v=1641031502",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Hair_20Strengthening_20Combo_400x.jpg?v=1641031502",
+        review:"9 reviews",mrp:"MRP ₹ 1,249.00",del:"₹1,330.00" },
+        {id:5, name:"Healthy Glow Combo",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Healthy_20Glow_20Combo_20_1_400x.jpg?v=1641031512",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Healthy_20Glow_20Combo_400x.jpg?v=1641031512",
+        review:"9 reviews",mrp:"MRP ₹ 899.00",del:"₹1,040.00" },
+        {id:6, name:"Mini Foot Spa Combo",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Mini_20Foot_20Spa_20Combo_20_1_400x.jpg?v=1641031541",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Mini_20Foot_20Spa_20Combo_400x.jpg?v=1641031541",
+        review:"4 reviews",mrp:"MRP ₹ 969.00",del:"₹1,000.00" },
+        {id:7, name:"Acne Relief Combo",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/acnereliefcombo_400x.jpg?v=1641034398",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Acne_20Relief_20Combo_400x.jpg?v=1641034398",
+        review:"10 reviews",mrp:"MRP ₹ 969.00",del:"₹1,000.00" },
+        {id:8, name:"Soft Lip Combo",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/softlipscombo_1_400x.jpg?v=1641839230",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Soft_20Lips_20Combo_904x1156_904x1156_4a160e99-2c4c-4e66-a63a-3b7b881f369d_400x.jpg?v=1642443278",
+        review:"16 reviews",mrp:"MRP ₹ 479.00",del:"₹580.00" },
+        {id:9, name:"Anti Acne kit",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/antiacnefinal_400x.jpg?v=1642793257",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/antiacnefinalwbg_400x.jpg?v=1642793257",
+        review:"33 reviews",mrp:"MRP ₹ 2,329.00",del:"₹2,480.00" },
+        {id:10, name:"Acne Vanishing Combo",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/AcneVanishingCombo_1_712c3057-1cbf-45d2-a85e-3067339fd080_400x.jpg?v=1642792028",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/AcneVanishingCombo_1_712c3057-1cbf-45d2-a85e-3067339fd080_400x.jpg?v=1642792028",
+        review:"15 reviews",mrp:"MRP ₹ 1,290.00",del:"" },
+        {id:11, name:"Hair Care Kit",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Hair_20Care_20Kit_400x.jpg?v=1641031490",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Hair_20Care_20Kit_400x.jpg?v=1641031490",
+        review:"4 reviews",mrp:"MRP ₹ 2,159.00",del:"₹2,270.00" },
+        {id:12, name:"Skin Brightening Kit",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Skin_20brightening_20Kit_400x.jpg?v=1641031621",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Skin_20brightening_20Kit_400x.jpg?v=1641031621",
+        review:"4 reviews",mrp:"MRP ₹ 2,039.00",del:"₹2,140.00" },
+        {id:13, name:"Face Care Essentials Combo",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Facecare_20Essentials_20Combo_904x1156_412f8dc6-1d12-4f05-8495-68ac8068d9f4_400x.jpg?v=1641839035",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Facecare_20Essentials_20Combo_904x1156_412f8dc6-1d12-4f05-8495-68ac8068d9f4_400x.jpg?v=1641839035",
+        review:"4 reviews",mrp:"MRP ₹ 1,029.00",del:"₹1,130.00" },
+        {id:14, name:"Super Cleanser Combo",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Super_20cleanser_20combo_400x.jpg?v=1641031646",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Super_20cleanser_20combo_400x.jpg?v=1641031646",
+        review:"10 reviews",mrp:"MRP ₹ 720.00",del:"₹860.00" },
+        {id:15, name:"Tan Removal Kit",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Tan_20removal_20kit_400x.jpg?v=1641031655",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Tan_20removal_20kit_400x.jpg?v=1641031655",
+        review:"4 reviews",mrp:"MRP ₹ 1,349.00",del:"₹1,460.00" },
+        {id:16, name:"Daily Essentials Combo",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/DailyEssentialsCombo-1_906x1156_e0e1de17-c51b-40ae-ab44-63dc9c4d9380_400x.jpg?v=1643267227",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/DailyEssentialsCombo-1_906x1156_e0e1de17-c51b-40ae-ab44-63dc9c4d9380_400x.jpg?v=1643267227",
+        review:"3 reviews",mrp:"MRP ₹ 1,089.00",del:"₹1,170.00" },
+        {id:17, name:"Hair Therapy Combo",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Hair_20Therapy_20Combo_904x1156_b00dbc67-db3b-4719-8d6a-fdb1fd5922fc_400x.jpg?v=1642793845",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Hair_20Therapy_20Combo_904x1156_b00dbc67-db3b-4719-8d6a-fdb1fd5922fc_400x.jpg?v=1642793845",
+        review:"1 review",mrp:"MRP ₹ 1,289.00",del:"₹1,380.00" },
+        {id:18, name:"Pore Tightening Combo",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Pore_20Tightening_20Combo_400x.jpg?v=1641031568",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Pore_20Tightening_20Combo_400x.jpg?v=1641031568",
+        review:"5 reviews",mrp:"MRP ₹ 1,169.00",del:"₹1,350.00" },
+        {id:19, name:"Best Sellers' Hamper",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/BestSellerHamper_1_5de02744-3cb4-4aba-bcc1-231f68d182c8_400x.jpg?v=1642794126",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/BestSellerHamper_1_5de02744-3cb4-4aba-bcc1-231f68d182c8_400x.jpg?v=1642794126",
+        review:"2 reviews",mrp:"MRP ₹ 3,129.00",del:"₹3,280.00" },
+        {id:20, name:"Anti-Ageing Kit",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/AntiAgeingKit_906x1156_65d454f3-7557-4683-8c34-79bfc5ff0819_400x.jpg?v=1643267449",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/AntiAgeingKit_906x1156_65d454f3-7557-4683-8c34-79bfc5ff0819_400x.jpg?v=1643267449",
+        review:"1 review",mrp:"MRP ₹ 1,939.00",del:"₹2,060.00" },
+        {id:21, name:"Adequate Skin Hydrators Combo",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/AdequateSkinhydratorscombo_906x1156_05790e93-eee7-457b-b1e2-705dd95bcb91_400x.jpg?v=1643267024",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/AdequateSkinhydratorscombo_906x1156_05790e93-eee7-457b-b1e2-705dd95bcb91_400x.jpg?v=1643267024",
+        review:"",mrp:"MRP ₹ 920.00",del:"₹1,080.00" },
+        {id:22, name:"Rose Glow Kit",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Rose_20Glow_20kit_400x.jpg?v=1641031581",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Rose_20Glow_20kit_400x.jpg?v=1641031581",
+        review:"1 review",mrp:"MRP ₹ 3,500.00",del:"₹3,800.00" },
+        {id:23, name:"Babycare Combo",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Babycare_20Combo_400x.jpg?v=1641031397",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Babycare_20Combo_400x.jpg?v=1641031397",
+        review:"",mrp:"MRP ₹ 899.00",del:"₹940.00" },
         
-    ]
-    let parent=document.querySelector("#middle_container");
+   ]
+   let parent=document.querySelector("#middle_container");
 
 let cartProductsArr = JSON.parse(localStorage.getItem("cart")) || [];
+let  IwishData = JSON.parse(localStorage.getItem("wishData"))  || [];
 
 function displaydata(cardarry){
 parent.innerHTML=null;
@@ -113,11 +183,11 @@ cardarry.forEach(function(elem){
     //     hey(elem)
     // })
 
-    myDiv.addEventListener("click",()=>{
+    // myDiv.addEventListener("click",()=>{
         
-        productInfo(elem)
-        window.location.href="./../particularProduct.html"
-    })
+    //     productInfo(elem)
+    //     window.location.href="./../particularProduct.html"
+    // })
 
     names=document.createElement("p")
     names.setAttribute("class","namess") 
@@ -156,7 +226,8 @@ function () {
     wish.style.fontSize="28px";
      wish.style.border="1px solid white"
      wish.addEventListener("click",()=>{
-         window.location.href = "./../blogpage.html"
+          wish.style.backgroundColor = "#A17C5F"
+           whishlistFunction(elem);
      });
 
 
@@ -213,12 +284,12 @@ function () {
 displaydata(cardarry)
 
 
-let count = 1;
-let productInfo = (elem)=>{
+// let count = 1;
+// let productInfo = (elem)=>{
     
-     localStorage.setItem("qty",count)
-    localStorage.setItem("particularPro",JSON.stringify(elem));
-}
+//      localStorage.setItem("qty",count)
+//     localStorage.setItem("particularPro",JSON.stringify(elem));
+// }
 
 
 function sortItems(){
@@ -351,10 +422,26 @@ function addToCartFunction(elem){
      }
 }
 
+let  whishlistFunction = (elem)=>{
+    let maintainWhishlistDuplicateArr = JSON.parse(localStorage.getItem("wishData")) || [];
+     //if(maintainWhishlistDuplicateArr.inc)
+     let flag = false;
+     for(let i=0;i<maintainWhishlistDuplicateArr.length;i++){
+         if(elem.id==maintainWhishlistDuplicateArr[i].id){
+             flag=true;
+         }
+     }
+
+     if(flag==false){
+        alert("Item Added to Whishlist!");
+       IwishData.push(elem);
+       localStorage.setItem("wishData",JSON.stringify(IwishData));
+     }
+
+}
 
 </script>
 <script src="./scripts/card.js"></script>
-
 
 <script type="module">
     document.getElementById('navbar1').addEventListener("click",()=>{
@@ -410,3 +497,5 @@ function addToCartFunction(elem){
    })
 
 </script>
+
+
