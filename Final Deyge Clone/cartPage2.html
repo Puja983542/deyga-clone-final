@@ -65,7 +65,7 @@
                  <div id="showTotalPrice">price</div>
              </div>
              <div>Shipping & taxes calculated at checkout</div>
-             <button>checkout</button>
+             <button id="gotoinfoPage">checkout</button>
          </div>
      </div>
 
@@ -294,6 +294,11 @@
 
 </script>
 
+<script type="module">
+     document.getElementById('gotoinfoPage').addEventListener("click",()=>{
+         window.location.href = "./information.html"
+     })
+</script>
 
 
 
