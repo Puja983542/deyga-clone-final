@@ -10,10 +10,10 @@ const navbar = ()=>{
        <div id="GoToIngredients">Ingredients</div>
     </div>
     <div>
-        <img src="https://cdn.shopify.com/s/files/1/0034/7901/1441/files/200x150-01_140x.png?v=1640868807" alt=""/>
+        <img id="gotoalwayshome" src="https://cdn.shopify.com/s/files/1/0034/7901/1441/files/200x150-01_140x.png?v=1640868807" alt=""/>
     </div>
     <div>
-        <input type="text" placeholder="SEARCH PRODUCTS"/>
+        <input type="text" placeholder="SEARCH PRODUCTS" id="searchbyname"/>
         <img src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-512.png" alt=""/>
          <div id="navbar01">
              <div id="navbar0">Account</div>

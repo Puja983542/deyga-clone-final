@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bath & Body</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./styles/navbar_footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,9 +17,9 @@
 <body>
     
     <div id="navbar"></div>
-    <div id="backhome"><a href="index.html">Home >Bath & Body</a></div>
+    <div id="backhome"><a href="index.html">Home > Men</a></div>
      <div class="upperimage">
-         <h2 class="title">Bath & Body</h1>
+         <h2 class="title">Men</h1>
         
      </div>
  
@@ -66,35 +66,34 @@
     
     
 </script>
-<script>
+<script >
      let cardarry = [
         {id:1, name:"Charcoal Bath Bar",
         image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/ICONS-05_400x.jpg?v=1648210587",
         image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Charcoal-soap_400x.jpg?v=1648210587",
         review:"566 reviews",mrp:"MRP ₹ 349.00",del:"₹410.00" },
-        {id:2, name:"Coconut Milk Shampoo Bar",
+        {id:2, name:"Hair Growth Oil",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Hairgrowth_400x.jpg?v=1647928745",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/01_11_1a8b25f0-9c3b-4804-8f8c-191012cf3399_400x.jpg?v=1647928745",
+        review:"291 reviews",mrp:"MRP ₹ 549.00",del:"₹600.00" },
+        {id:3, name:"Coconut Milk Shampoo Bar",
         image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Shampoo-Bar_400x.jpg?v=1647864464",
         image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Shampoo-Bar_400x.jpg?v=1647864464",
         review:"62 reviews",mrp:"MRP ₹ 390.00",del:"" },
-        {id:3, name:"Shea Saffron Bath Bar",
-        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/SheaSaffronBathBar_400x.jpg?v=1647864001",
-        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/SheaSaffronBathBar_400x.jpg?v=1647864001",
-        review:"21 reviews",mrp:"MRP ₹ 390.00",del:"" },
-        {id:4, name:"Body Scrub",
-        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/BodyScrub_400x.jpg?v=1647862779",
-        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6336_400x.jpg?v=1647862779",
-        review:"9 reviews",mrp:"MRP ₹ 450.00",del:"" },
-        {id:5, name:"Loofah",
-        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Shoot_3_4_1000x1000_ee8c9638-79ac-4a9a-bbc1-36f7ab80b3f5_400x.jpg?v=1641031536",
-        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Shoot_3_4_1000x1000_ee8c9638-79ac-4a9a-bbc1-36f7ab80b3f5_400x.jpg?v=1641031536",
-        review:"14 reviews",mrp:"MRP ₹ 50.00",del:"" },
-        {id:6, name:"Baby Bath Bar",
-        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/BabyBathBar_400x.jpg?v=1647863891",
-        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Baby_Soap_c52c3f11-1708-4a04-afd4-c051e9e5b252_400x.jpg?v=1647863891",
-        review:"7 reviews",mrp:"MRP ₹ 390.00",del:"" },
-        
-    ]
-    let parent=document.querySelector("#middle_container");
+        {id:4, name:"Charcoal Face Pack",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Charcoal-1_400x.jpg?v=1647862565",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A6313_400x.jpg?v=1647862565",
+        review:"15 reviews",mrp:"MRP ₹ 550.00",del:"" },
+        {id:5, name:"Mustache and Beard Oil",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Untitleddesign_7_400x.png?v=1642829500",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Untitleddesign_7_400x.png?v=1642829500",
+        review:"2 reviews",mrp:"MRP ₹ 590.00",del:"" },
+        {id:6, name:"Shea Butter Lip Balm",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/05_400x.jpg?v=1642512099",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5188_b352b249-6408-4003-bd92-e9f4be1f8dbc_400x.jpg?v=1642512099",
+        review:"4 reviews",mrp:"MRP ₹ 249.00",del:"₹290.00" },
+   ];
+   let parent=document.querySelector("#middle_container");
 
 let cartProductsArr = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -350,10 +349,11 @@ function addToCartFunction(elem){
         localStorage.setItem("cart",JSON.stringify(cartProductsArr));
      }
 }
-
+  
 
 </script>
 <script src="./scripts/card.js"></script>
+
 
 
 <script type="module">
