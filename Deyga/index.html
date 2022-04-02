@@ -767,6 +767,20 @@
         }
         );
         //box-shadow: ;
+
+       let wish = document.createElement("i")
+    wish.setAttribute("class","fa fa-heart-o")
+  
+     wish.setAttribute("id","suraj")
+     wish.style.fontSize="28px";
+     wish.style.border="1px solid white"
+
+
+
+
+
+
+
         // box-shadow:
 
         var img = document.createElement("img");
@@ -850,7 +864,7 @@
         priceFlex.append(price, strike)
         ImageLessBox.append(name, viwerStar, priceFlex, button)
 
-        box.append(img, ImageLessBox)
+        box.append(img, ImageLessBox,wish)
         indexGridContainer.append(box)
     })
 

@@ -9,24 +9,193 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      
-    <link rel="stylesheet" href="./styles/products.css">
+
    
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     
 
  
-   
+    <style> 
+        span{
+            color:orange
+        }
+        .ppupperimg{
+            height: 400px;
+            width:99%;
+        }
+        #middle_container{
+            display: grid;
+            grid-template-columns: repeat(4,23%);
+            gap: 10px;
+            width: 90%;
+            justify-content: space-between;
+            /* border: 1px solid black; */
+            margin: auto;
+        }
+        body{
+            overflow-x: hidden;
+        }
+
+        /* mainImg */
+        #middle_container>div>div>img{
+            width: 280px;
+            height: 340px;
+            margin: 10px;
+            border-radius: 7px;
+            
+        }
+        /* div1,div2 */
+        #middle_container>div>div>div{
+            display: flex;
+          
+            width: 70%;
+            margin-left: 70px;
+            
+        }
+        /* addToCart btn */
+        .cart_button{
+            height: 40px;
+            width:100px;
+            background-color: white;
+            border-radius: 5px;
+            margin-top: 20px;
+            border: 2px solid black;
+            border-radius: 45px;
+            width: 150px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+         
+        }
+        .cart_button:hover{
+               background-color: black;
+               color: white;
+               border-radius: 45px;
+        }
+        /* div */
+        .upper_container{
+         
+            position: relative;
+            z-index: 0;
+            text-align: center;
+        }
+        .upper_container:hover{
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            border-radius: 7px;
+        }
+        
+        /* heartIcon */
+        i{
+            width: 40px;
+            height: 33px;
+            display: flex;
+            align-items: center;
+            /* text-align: center; */
+            border-radius: 50%;
+            border: 3px solid black;
+            position: absolute;
+            top: 25px;
+            right: 30px;
+            background-color: white;
+        
+        }
+        #suraj:hover{
+            cursor: pointer;
+        }
+        #pic:hover{
+            cursor: pointer;
+        }
+        .short{
+            float: right;
+            margin-top: -45px;
+            margin-right: 20px;
+        }
+        select{
+            border: none;
+            outline: none;
+        }
+        .upperimage{
+            text-align: center;
+        }
+        #upperfooter{
+            height: 400px;
+            width: 99%;
+            /* border: 1px solid black; */
+            font-size: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #upperfooter01{
+            height: 200px;
+            width: 80%;
+        }
+        option{
+            height: 40px;
+            width: 80px;
+        }
+
+        /* div2 */
+        #priceAndDel{
+          margin-top: -1px;
+          font-size: 13px;
+        }
+
+        /* div1 */
+        #stardiv{
+            margin-top: 7px;
+        
+
+        }
+        /* review */
+        #stardiv>div{
+            margin-top: -3px;
+        }
+        /* price */
+        #priceAndDel>div{
+            margin-right: -13px;
+            
+        }
+        /* del */
+        del{
+            margin-left: -3px;
+            color: #737373;
+            font-weight: 600;
+        }
+        /* heartIcon */
+        #suraj{
+            
+            padding-top: 5px;
+        }
+        /* mainImg */
+       #pic{
+           width: 90%;
+           margin-right: 5px;
+       }
+      #backhome{
+          margin-top: 3%;
+          color: black;
+          margin-left: 2%;
+      }
+      #backhome>a{
+          color: black;
+      }
+      .gotoparticulatpage{
+          text-align: center;
+        
+      }
+      /* .namess{
+          text-align: center;
+          border: 1px solid black;
+          width: 80px;
+
+      } */
+    </style>
 </head>
 <body>
     <div id="navbar"></div>
-    <div id="stickyImages">
-        <img src="https://lh3.googleusercontent.com/stk7qIhvTn-6p1x3eYOfqnNCdIkNjyIoZPlZtwiDCzdhxEYc8Gsm1obY0zYdR13NfW_UkF4=s88" alt=""/>
-        <img src="https://lh3.googleusercontent.com/7GC8KgKN3PBmRKrqYOpBvozvAkrDknIwHhpDyMlDhEo_xEEEmHN81MTm7dNQvMyg4CcZ=s87" alt=""/>
-        <img src="https://lh3.googleusercontent.com/viOmLsqBaf_hyffXvvUFInfNNDwwQp6UpqQkPQU6uQFK-eE2MJnRGVdetr2Df6Q1twm85w=s87" alt=""/>
-        <img src="https://lh3.googleusercontent.com/AGtkZJFXY39I8G7s0dXFAGzgVuvr_m5Li-5v2TDlpqWdQtXOmf9WG13REwpOBuKKDXD70A=s87" alt=""/>
-        <img src="https://cdn.shopify.com/s/files/1/0034/7901/1441/t/139/assets/ping-svg2.svg?v=1619612966" alt=""/>
-    </div>
-   <div id="backhome"><a href="index.html">Home > Skin Care</a></div>
+   <div id="backhome"><a href="homepage.html">Home > Skin Care</a></div>
     <div class="upperimage">
         <h2 class="title">Skin Care</h1>
         <img class="ppupperimg" src="https://cdn.shopify.com/s/files/1/0034/7901/1441/collections/BANNER-02_3_x600.jpg?v=1647860211%20600w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/BANNER-02_3_800x.jpg?v=1647860211%20800w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/BANNER-02_3_1200x.jpg?v=1647860211%201200w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/BANNER-02_3_1400x.jpg?v=1647860211%201400w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/BANNER-02_3_1600x.jpg?v=1647860211%201600w" >
@@ -35,7 +204,7 @@
     <hr style="margin-bottom: 5%;">
     <div class="short">
         <select name="cars" id="cars" onchange="sortItems()">
-            <option value="Kalyani">Sort</option>
+            <option value="Kalyani">Short</option>
             <option value="Suraj">Best Seller </option>
             <option value="Puja">Alphabetically A-Z</option>
             <option value="Ajay">Alphabetically Z-A</option>
@@ -412,64 +581,7 @@ function addToCartFunction(elem){
 
 
 </script>
-<!-- <script src="./scripts/card.js"></script> -->
-
-
-<script type="module">
-    document.getElementById('navbar1').addEventListener("click",()=>{
-        window.location.href = "./skincare.html"
-    })
-
-    document.querySelector("#navbar00>div:first-child").addEventListener("click",()=>{
-        window.location.href = "./LoginPage.html"
-    })
-    document.querySelector("#navbar00>div:last-child").addEventListener("click",()=>{
-        window.location.href = "./SignupPage.html"
-    })
-    document.querySelector("#navbar00>div:nth-child(2)").addEventListener("click",()=>{
-        window.location.href = "./whishlist.html"
-    })
-    document.getElementById("GoToIngredients").addEventListener("click",()=>{
-        window.location.href = "./Ingredients.html"
-    })
-    document.getElementById("GpToBlog").addEventListener("click",()=>{
-        window.location.href="./blogpage.html"
-    })
-
-    document.getElementById('navbar2').addEventListener("click",()=>{
-        window.location.href = "./haircare.html"
-    })
-    document.getElementById('navbar3').addEventListener("click",()=>{
-        window.location.href = "./bathbody.html"
-    })
-    document.getElementById('navbar4').addEventListener("click",()=>{
-        window.location.href = "./oralcare.html"
-    })
-    document.getElementById('navbar5').addEventListener("click",()=>{
-        window.location.href = "./wellness.html"
-    })
-    document.getElementById('navbar6').addEventListener("click",()=>{
-        window.location.href = "./babycare.html"
-    })
-    document.getElementById('navbar7').addEventListener("click",()=>{
-        window.location.href = "./men.html"
-    })
-    document.getElementById('navbar8').addEventListener("click",()=>{
-        window.location.href = "./combo.html"
-    })
-    document.getElementById('navbar9').addEventListener("click",()=>{
-        window.location.href = "./gifting.html"
-    })
-    document.getElementById('navbar10').addEventListener("click",()=>{
-        window.location.href = "./offers.html"
-    })
-
-   document.getElementById("gotoalwayshome").addEventListener("click",()=>{
-       window.location.href="./index.html"
-   })
-
-</script>
-
+<script src="./scripts/card.js"></script>
 
 
 

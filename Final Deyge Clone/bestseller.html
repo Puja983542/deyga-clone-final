@@ -8,34 +8,25 @@
     <link rel="stylesheet" href="./styles/navbar_footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     
     <link rel="stylesheet" href="./styles/products.css">
+    <link rel="stylesheet" href="./styles/card.css">
+     
+
    
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    
-
- 
-   
 </head>
 <body>
     <div id="navbar"></div>
-    <div id="stickyImages">
-        <img src="https://lh3.googleusercontent.com/stk7qIhvTn-6p1x3eYOfqnNCdIkNjyIoZPlZtwiDCzdhxEYc8Gsm1obY0zYdR13NfW_UkF4=s88" alt=""/>
-        <img src="https://lh3.googleusercontent.com/7GC8KgKN3PBmRKrqYOpBvozvAkrDknIwHhpDyMlDhEo_xEEEmHN81MTm7dNQvMyg4CcZ=s87" alt=""/>
-        <img src="https://lh3.googleusercontent.com/viOmLsqBaf_hyffXvvUFInfNNDwwQp6UpqQkPQU6uQFK-eE2MJnRGVdetr2Df6Q1twm85w=s87" alt=""/>
-        <img src="https://lh3.googleusercontent.com/AGtkZJFXY39I8G7s0dXFAGzgVuvr_m5Li-5v2TDlpqWdQtXOmf9WG13REwpOBuKKDXD70A=s87" alt=""/>
-        <img src="https://cdn.shopify.com/s/files/1/0034/7901/1441/t/139/assets/ping-svg2.svg?v=1619612966" alt=""/>
-    </div>
-   <div id="backhome"><a href="index.html">Home > Skin Care</a></div>
+   <div id="backhome"><a href="index.html">Home > Best Sellers</a></div>
     <div class="upperimage">
-        <h2 class="title">Skin Care</h1>
-        <img class="ppupperimg" src="https://cdn.shopify.com/s/files/1/0034/7901/1441/collections/BANNER-02_3_x600.jpg?v=1647860211%20600w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/BANNER-02_3_800x.jpg?v=1647860211%20800w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/BANNER-02_3_1200x.jpg?v=1647860211%201200w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/BANNER-02_3_1400x.jpg?v=1647860211%201400w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/BANNER-02_3_1600x.jpg?v=1647860211%201600w" >
+        <h2 class="title">Best sellers</h1>
+        <img class="ppupperimg" src="https://cdn.shopify.com/s/files/1/0034/7901/1441/collections/38-02_x600.jpg?v=1647858001%20600w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/38-02_800x.jpg?v=1647858001%20800w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/38-02_1200x.jpg?v=1647858001%201200w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/38-02_1400x.jpg?v=1647858001%201400w,%20//cdn.shopify.com/s/files/1/0034/7901/1441/collections/38-02_1600x.jpg?v=1647858001%201600w" >
     </div>
 
     <hr style="margin-bottom: 5%;">
     <div class="short">
         <select name="cars" id="cars" onchange="sortItems()">
-            <option value="Kalyani">Sort</option>
+            <option value="Kalyani">Short</option>
             <option value="Suraj">Best Seller </option>
             <option value="Puja">Alphabetically A-Z</option>
             <option value="Ajay">Alphabetically Z-A</option>
@@ -46,28 +37,28 @@
     <hr>
    
 <div id="middle_container"></div>
-
-<div id="upperfooter">
-    <div id="upperfooter01">
-    <h6><strong>FOR THE MYRIAD OF SKIN CONCERNS, NATURAL IS THE REMEDY YOU SEEK</strong></h5>
-    <p><strong>Skincare</strong> today is as streamlined and routine-centric as it can get. The more knowledge you incur from the umpteen vlogs and blogs about the right <strong>skincare routine</strong>,
-         the more you are at sea to make a decision. The rights and wrongs opined by influencers are what works for them. Seeking the right<strong> skincare products</strong> that merits your skin, often ends you with an
-         intensified awareness of the importance of skincare. Rarely does the quest reach you to one that would be perfect
-         .</p>
-         <p>It’s not favourable to give in to the confusion. The catch is to keep the quest going until you find the most suited one.</p>
-
-         <p>An efficient way to get there is to consider the <strong>best skin care product reviews </strong>given by bloggers and influencers. 
-             There are blogs devoted solely to contributing honest and heartfelt experiences they have had with a range of cosmetics used. Here you can discover various products, techniques and best practices for each of those categories. It doesn’t conclude with just the product names and instructions. 
-             They offer advice as to how you can derive the best out of these investments you have made.</p>
-</div>
 </div>
 
-    <div id="footer"></div>
+<hr>
+ <div id="middle_container1">Recently viewed</div>
 
-    
+
+<div id="slider">
+    <div id="sliderappend">
+        <div id="one"></div>
+        <div id="two"></div>
+    </div>
+    <!-- <div id="indicator"> -->
+        <button id="btn1"><</button>
+        <button id="btn2">></button>
+    <!-- </div> -->
+</div>
+
+<div id="footer"></div>
+
+
 </body>
 </html>
-
 <script type="module">
 
     import {navbar,footer} from "./components/navbar.js"
@@ -413,7 +404,7 @@ function addToCartFunction(elem){
 
 </script>
 <!-- <script src="./scripts/card.js"></script> -->
-
+<script src="./scripts/card.js"></script>
 
 <script type="module">
     document.getElementById('navbar1').addEventListener("click",()=>{
@@ -471,10 +462,4 @@ function addToCartFunction(elem){
 </script>
 
 
-
-
-
-
-
-
-
+    

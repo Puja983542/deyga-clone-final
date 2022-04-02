@@ -9,6 +9,8 @@ arr2=[ {id:"5", name:"Neem and Turmeric Bath Bar",review:"10 reviews",mrp:"MRP �
 {id:"7", name:"Lemon Mist",review:"9 reviews",mrp:"MRP ₹ 490.00",del:"",image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Lemon_400x.jpg?v=1647862222",image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5458_400x.jpg?v=1647862222"},
 {id:"8", name:"Chocolate Body Butter",review:"7 reviews",mrp:"MRP ₹ 550",del:"",image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/CHOCOLATE_20BODY_20BUTTER_400x.jpg?v=1641031450",image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/J8A5646_400x.jpg?v=1641031450"},]
 
+
+
 parent=document.querySelector("#one")
 parent2=document.querySelector("#two")
 
@@ -20,14 +22,14 @@ arr1.forEach(function(elem){
     image.src=elem.image;
     image.setAttribute("id","picsss")
 
-    $(image).hover(function () {
+    // $(image).hover(function () {
        
-       image.src = elem.image2;
-           }, function () {
-               // out
-                image.src = elem.image;
-           }
-        );
+    //    image.src = elem.image2;
+    //        }, function () {
+    //            // out
+    //             image.src = elem.image;
+    //        }
+    //     );
 //            $("#pics").hover(function () {
 //     //stuff to do on mouse enter
 //     image.src = elem.image2;
@@ -164,6 +166,8 @@ arr2.forEach(function(elem){
     parent2.append(divs)
 })
 
+
+
 var sliderappend=document.querySelector("#sliderappend")
 var btn11=document.querySelector("#btn1")
 var btn22=document.querySelector("#btn2")
@@ -177,3 +181,4 @@ btn22.onclick=function(){
     sliderappend.style.transform="translate(-100%)";
 
 }
+
