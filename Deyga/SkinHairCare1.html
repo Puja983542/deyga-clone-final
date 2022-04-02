@@ -124,10 +124,12 @@
             </div>
             <div id="indexGridContainer" class="indexGridContainer"></div>
             <div id="BestSellingCombosContainer">
-                <div class="btnViweAllProducts">
-                    <button class=" bestSellerLovedComboBtn"> View All Products</button>
+                <div class="btnViweAllProducts"  id="bestSellerLovedComboBtn"> 
+                    <button> View All Products</button>
+                 </div>
+                   
 
-                </div>
+              
                 <div class="HeadingContainer">
                     <h3 class="h3HeadingCSS"> Best Selling Combos</h3>
                     <div>
@@ -760,7 +762,8 @@
 
     ]
 
-    var bestSellerLovedComboBtn = document.getElementById("bestSellerLovedComboBtn")
+
+
 
     var indexGridContainer = document.getElementById("indexGridContainer");
     document.getElementById("bestSeller").style.background = "peru";
@@ -768,17 +771,19 @@
         indexGridContainer.innerHTML = null;
         document.getElementById("bestSeller").style.background = "peru";
         document.getElementById("LovedCombo").style.background = "none";
+       
+        bestSellerLovedComboBtn.addEventListener("click",()=>
+    {
+        window.location.href="./bestseller.html"
+    })
 
 
         openBestSeller()
-
-
-    });
-    if (bestestleller == true) {
-        bestSellerLovedComboBtn.addEventListener("click", () => {
-            window.location.href = "./combo.html"
-        })
-    }
+       });
+       bestSellerLovedComboBtn.addEventListener("click",()=>
+    {
+        window.location.href="./bestseller.html"
+    })
 
 
 
@@ -790,24 +795,21 @@
         document.getElementById("bestSeller").style.background = "none";
 
         indexGridContainer.innerHTML = null;
-
+        bestSellerLovedComboBtn.addEventListener("click",()=>
+    {
+        window.location.href="./combo.html"
+    })
 
 
         openLovedCombo()
     });
 
-    // bestSellerLovedComboBtn.addEventListener("click",()=>
-    // {
-    //     window.location.href="./combo.html"
-    // })
+    
 
 
 
 
-    // bestSellerLovedComboBtn.addEventListener("click",()=>
-    // {
-    //     window.location.href="./bestseller.html"
-    // })
+ 
     indexBestSeller.map(function (ele, index) {
         let box = document.createElement("div")
         let viwerStar = document.createElement("div")
@@ -816,10 +818,10 @@
         ImageLessBox.setAttribute("class", "margin0px")
         box.setAttribute("class", "item");
         box.setAttribute("id", "IndexgridBoxed");
-        let wish = document.createElement("i")
-        wish.setAttribute("class", "fa fa-heart-o")
-        wish.setAttribute("id", "suraj")
-        wish.style.fontSize = "28px";
+        // let wish = document.createElement("i")
+        // wish.setAttribute("class", "fa fa-heart-o")
+        // wish.setAttribute("id", "suraj")
+        // wish.style.fontSize = "20px";
 
         $(box).hover(function () {
             box.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
@@ -910,9 +912,9 @@
 
         viwerStar.append(star, viewers)
         priceFlex.append(price, strike)
-        ImageLessBox.append(name, viwerStar, priceFlex, button, wish)
+        ImageLessBox.append(name, viwerStar, priceFlex, button)
 
-        box.append(img, ImageLessBox)
+        box.append(img, ImageLessBox,)
         indexGridContainer.append(box)
     })
 
@@ -1190,10 +1192,7 @@
     ]
     // -----initial appeend--------------------
     var viewAllProductBtn = document.getElementById("viewAllProductBtn");
-    // viewAllProductBtn.addEventListener("click",()=>
-    // {
-    //     window.location.href="./skincare.html"
-    // })
+   
     indexSkinCare.map(function (ele, index) {
         let box = document.createElement("div")
         let viwerStar = document.createElement("div")
@@ -1308,27 +1307,30 @@
         indexSkinOrHairShowData.innerHTML = null;
         document.getElementById("hairCareBtn").style.background = "none";
         document.getElementById("SkinCareBtn").style.background = "peru";
-        // viewAllProductBtn.addEventListener("click",()=>
-        // {
-        //     window.location.href = "./skincare.html"
-        // })
+
+    viewAllProductBtn.addEventListener("click", () => {
+        window.location.href="./skincare.html"
+    })
 
 
         openSkinCare()
     });
 
-    // <button id="SkinCareBtn"> Skin Care</button>
-    //                     <button id="hairCareBtn">Hair Care</button>
 
+    viewAllProductBtn.addEventListener("click", () => {
+        window.location.href="./skincare.html"
+    })
+
+   
     document.getElementById("hairCareBtn").addEventListener("click", () => {
         indexSkinOrHairShowData.innerHTML = null;
         document.getElementById("hairCareBtn").style.background = "peru"
         document.getElementById("SkinCareBtn").style.background = "none";
 
 
-        //     viewAllProductBtn.addEventListener("click",()=>{
-        //     window.location.href="./haircare.html"
-        // });
+            viewAllProductBtn.addEventListener("click",()=>{
+            window.location.href="./haircare.html"
+        });
 
         openHairCare()
     });
