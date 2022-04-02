@@ -10,7 +10,7 @@
 
     height: 145px;
 
-    
+
 
     background-color: #FFFFFF;
 
@@ -488,10 +488,14 @@ input {
     margin-top: 5%;
 
 }
+    
+#indexGridContainer>div>img{
+    border-radius: 20px;
+}
 
 #IndexgridBoxed {
     width: 300px;
-    height: 500px;
+ height: 550px;
     /* border: 2px solid red; */
     display: block;
     justify-content: center;
@@ -692,15 +696,16 @@ input {
 
 /* Our Combos Corosal */
 
-#ComboParent{
+#ComboParent {
     display: flex;
     margin: auto;
     width: 75%;
-    gap:20px;
-    margin-top:0px;
+    gap: 20px;
+    margin-top: 0px;
     margin-bottom: 100px;
 }
-#ComboRight{
+
+#ComboRight {
     width: 400px;
     height: 600px;
     margin: auto;
@@ -710,17 +715,20 @@ input {
     margin-bottom: 30px; */
     /* border: 2px solid red; */
 }
-#ComboRight>img{
+
+#ComboRight>img {
     width: 80%;
     border-radius: 20px;
-   
- 
-    
+
+
+
 }
-#fasaad:hover{
-   background-image: url("./Images/landProRight2..PNG");
+
+#fasaad:hover {
+    background-image: url("./Images/landProRight2..PNG");
 }
-#ComboRight>div{
+
+#ComboRight>div {
     display: flex;
     width: 36%;
     margin: auto;
@@ -728,6 +736,7 @@ input {
     justify-content: space-between;
     font-family: sans-serif;
 }
+
 /* #ComboRight1{
     background: url("./Images/landProRight.PNG");
     height: 250px;
@@ -739,14 +748,15 @@ input {
     justify-content: space-between;
     font-family: sans-serif;
 } */
-#ComboRight>div{
+#ComboRight>div {
     width: 36%;
     margin: auto;
     font-size: 12px;
     justify-content: space-between;
     font-family: sans-serif;
 }
-#ComboHead{
+
+#ComboHead {
     font-family: sans-serif;
     /* border: 1px solid red; */
     width: 14%;
@@ -754,132 +764,143 @@ input {
     margin-top: 50px;
     margin-bottom: 50px;
 }
-#Combobut1{
+
+#Combobut1 {
     border-radius: 25px;
     /* margin-left: 36%; */
     width: 28%;
     height: 40px;
     border: 1px solid;
-   
+
     font-size: 16px;
     font-weight: 600;
     background-color: white;
 }
-#Combobut1:hover{
+
+#Combobut1:hover {
     background-color: black;
     color: white;
 }
-#Combobut2{
+
+#Combobut2 {
     border-radius: 5px;
     width: 65%;
     /* margin-left: 17%; */
     background-color: #403232;
     color: white;
-   margin-top: 20px;
+    margin-top: 20px;
     height: 40px;
     font-size: 20px;
 }
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  height: 55px;
-  width: 55px;
- 
-  background-color:rgb(29, 28, 28);
-  background-size: 100%, 100%;
-  border-radius: 50%;
-  border: 1px solid black;
-  background-image: none;
- 
+    height: 55px;
+    width: 55px;
+
+    background-color: rgb(29, 28, 28);
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-image: none;
+
 }
-.carousel-control-next-icon:after
-{
-  content: '>';
-  font-size: 40px;
-  color:white;
+
+.carousel-control-next-icon:after {
+    content: '>';
+    font-size: 40px;
+    color: white;
 }
 
 .carousel-control-prev-icon:after {
-  content: '<';
-  font-size:40px;
-  color:white
+    content: '<';
+    font-size: 40px;
+    color: white
 }
 
-#img1HovRight:hover
-{
+#img1HovRight:hover {
     background-image: url("https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Healthy_20Glow_20Combo_20_1_400x.jpg");
-   
-    
+
+
 }
+
 /*---------------- Press Feature-------------------- */
-#PressImg>img{
+#PressImg>img {
     width: 250px;
     height: 150px;
     /* border: 1px solid red; */
 }
 
 
-#PressImg{
+#PressImg {
 
     display: grid;
-    grid-template-columns: repeat(4,250px);
-    grid-template-rows: repeat(3,150px);
-    gap:20px;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: repeat(3, 150px);
+    gap: 20px;
     justify-content: center;
-   
-   
+
+
 }
 
 /* ---------Award-------------- */
-#AwardContainer{
+#AwardContainer {
     justify-content: center;
     margin-bottom: 50px;
 }
-#awardImgFlex{
+
+#awardImgFlex {
     display: flex;
-    gap:20px;
+    gap: 20px;
     justify-content: center;
-    
+
 
 }
-#awardImgFlex>img{
+
+#awardImgFlex>img {
     width: 300px;
-    height:200px;
+    height: 200px;
     /* border: 1px solid red; */
 
 }
 
 /* -------------Article----------- */
 
-#IndexArticleContainer{
+#IndexArticleContainer {
     margin-top: 100px;
 }
 
-#ArtParent{
+#ArtParent {
     display: flex;
-    gap:10px;
+    gap: 10px;
     justify-content: space-around;
-    
-  }
-  #ArtParent>div{
+
+}
+
+#ArtParent>div {
     width: 30%;
     border: 1px solid black;
     border-radius: 25px;
 }
-#ArtParent>div>img{
+
+#ArtParent>div>img {
     width: 92%;
     margin: 4%;
-    border-radius: 25px ;
+    border-radius: 25px;
 }
-#artOne{
+
+#artOne {
     background-color: #F7D9B4;
 }
-#artOne>h4{
+
+#artOne>h4 {
     margin-left: 4%;
     font-family: sans-serif;
     /* font-size: 90%; */
     margin-bottom: 10px;
 }
-#artOne>p{
+
+#artOne>p {
     margin-left: 4%;
     font-family: sans-serif;
     width: 88%;
@@ -887,7 +908,8 @@ input {
     margin-bottom: 20px;
     line-height: 18px;
 }
-#artOne>button{
+
+#artOne>button {
     margin-left: 4%;
     width: 30%;
     border: 0.5px solid;
@@ -899,16 +921,18 @@ input {
 }
 
 
-#artTwo{
+#artTwo {
     background-color: #E8C4A7;
 }
-#artTwo>h4{
+
+#artTwo>h4 {
     margin-left: 4%;
     font-family: sans-serif;
     /* font-size: 90%; */
     margin-bottom: 10px;
 }
-#artTwo>p{
+
+#artTwo>p {
     margin-left: 4%;
     font-family: sans-serif;
     width: 88%;
@@ -916,7 +940,8 @@ input {
     margin-bottom: 20px;
     line-height: 18px;
 }
-#artTwo>button{
+
+#artTwo>button {
     margin-left: 4%;
     width: 30%;
     border-radius: 25px;
@@ -927,17 +952,19 @@ input {
     font-weight: 700;
 }
 
-#artThree{
+#artThree {
     background-color: #C28F6D;
     color: white;
 }
-#artThree>h4{
+
+#artThree>h4 {
     margin-left: 4%;
     font-family: sans-serif;
-   
+
     margin-bottom: 10px;
 }
-#artThree>p{
+
+#artThree>p {
     margin-left: 4%;
     font-family: sans-serif;
     width: 88%;
@@ -945,7 +972,8 @@ input {
     margin-bottom: 20px;
     line-height: 18px;
 }
-#artThree>button{
+
+#artThree>button {
     margin-left: 4%;
     width: 30%;
     border-radius: 25px;
@@ -956,26 +984,88 @@ input {
     font-weight: 700;
     color: white;
 }
-.article{
+
+.article {
     text-align: center;
     font-family: sans-serif;
     margin-bottom: 70px;
     margin-top: 80px;
 }
 
-#parentInstagramFeed
-{
+#parentInstagramFeed {
     margin-top: 100px;
 }
-#SuperStarParentContainer
-{
+
+#SuperStarParentContainer {
     margin-top: 100px;
 }
-#footer{
-    margin-top:100px;
+
+#footer {
+    margin-top: 100px;
 }
-/* SuperStarParentContainer */
-/* IndexArticleContainer */
 
+/* Wish list */
+.fa-heart-o {
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+    border: 3px solid black;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    background-color: white;
 
+}
+
+#suraj:hover {
+    cursor: pointer;
+}
+
+#suraj {
+    /* background-color: deeppink; */
+    padding-top: 6px;
+}
+/* button add to cart */
+#kalyani{
+    height: 40px;
+    width:100px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 2px solid black;
+    border-radius: 45px;
+    width: 150px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+/* #kalyani:hover{
+    background-color: black;
+    color: white;
+    border-radius: 45px;
+  
+} */
+
+/* .item>button{
+    height: 40px;
+    width:100px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 2px solid black;
+    border-radius: 45px;
+    width: 150px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+
+}
+#IndexgridBoxed
+{
+    padding-bottom: 10px;
+} */
 
