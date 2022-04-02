@@ -5,37 +5,69 @@
     <title>Animated Sidebar Menu | CodingLab</title>
     <link rel="stylesheet" href="./right.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+      #container{
+        height: 200px;
+        overflow-y: scroll;
+      }
+      img{
+        width: 100px;
+        height: 100px;
+      }
+       #container>div{
+         /* border: 5px solid green; */
+         width: 300px;
+       }
+    </style>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper" >
       <input type="checkbox" id="btn" hidden>
       <label for="btn" class="menu-btn">
         <i class="fas fa-bars"></i>
         <i class="fas fa-times"></i>
+        
       </label>
-      <nav id="sidebar">
-        <div class="title">Side Menu</div>
-        <ul class="list-items">
-          <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
-          <li><a href="#"><i class="fas fa-sliders-h"></i>Clients</a></li>
-          <li><a href="#"><i class="fas fa-address-book"></i>Services</a></li>
-          <li><a href="#"><i class="fas fa-cog"></i>Settings</a></li>
-          <li><a href="#"><i class="fas fa-stream"></i>Features</a></li>
-          <li><a href="#"><i class="fas fa-user"></i>About us</a></li>
-          <li><a href="#"><i class="fas fa-globe-asia"></i>Languages</a></li>
-          <li><a href="#"><i class="fas fa-envelope"></i>Contact us</a></li>
-          <div class="icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-          </div>
-        </ul>
+      <nav id="sidebar" style="border: 3px solid yellow;">
+        <div class="title" style="border: 2px solid red;">Side Menu</div>
+        <div id="container" style="border: 3px solid white;"></div>
+       
       </nav>
     </div>
-    <div class="content">
-      <div class="header">Animated Side Navigation Menu</div>
-      <p>using only HTML and CSS</p>
-    </div>
+   
+    <!-- <div id="container"></div> -->
   </body>
 </html>
+<script>
+     let oralArr = [
+        {id:1, name:"Charcoal Tooth Whitening Powder",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/CharcoalToothPowder_400x.jpg?v=1647863279",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/CharcoalToothPowder_400x.jpg?v=1647863279",
+        review:"17 reviews",mrp:"MRP ₹ 290.00",del:"" },
+        {id:2, name:"Tooth brush",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Tooth_20brusg_400x.jpg?v=1641031663",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Tooth_20brusg_400x.jpg?v=1641031663",
+        review:"6 reviews",mrp:"MRP ₹ 140.00",del:"" },
+        {id:3, name:"Herbal Tooth & Gum Powder",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/HerbalToothPowder_400x.jpg?v=1647863321",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/HerbalToothPowder_400x.jpg?v=1647863321",
+        review:"12 reviews",mrp:"MRP ₹ 290.00",del:"" },
+   ]
+
+//container
+    oralArr.map((el)=>{
+
+        let div = document.createElement("div");
+
+        let img = document.createElement("img");
+        img.src = el.image;
+
+        let btn = document.createElement("button");
+        btn.innerText="Add to cart"
+
+        div.append(img,btn)
+
+        document.getElementById("container").append(div)
+    })
+
+</script>

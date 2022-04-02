@@ -13,7 +13,7 @@
   position: relative;
 }
 .wrapper .menu-btn{
-  position: absolute;
+  position: fixed;
   left: 1400px;
   top: 10px;
   background: #4a4a4a;
@@ -28,12 +28,16 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  margin-left: -42px;
+  margin-top: 22px;
 }
 /* #btn:checked ~ .menu-btn{
   left: 1270px;
 } */
 .wrapper .menu-btn i{
-  position: absolute;
+  /* position: absolute; */
+  /* position: sticky;
+  top: 10%; */
   
   font-size: 23px;
   transition: all 0.3s ease;
@@ -54,12 +58,17 @@
   position: fixed;
   background: #404040;
   height: 100%;
-  width: 400px;
+  width: 500px;
   overflow: hidden;
-  right: -400px;
+  right: -500px;
   transition: all 0.3s ease;
   margin-top: 50px;
-
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid black;
+  /* padding-left: 20px;
+  padding-right: 10px; */
+  z-index: 20;
 }
 #btn:checked ~ #sidebar{
   right: 0;
@@ -129,6 +138,7 @@
   border-radius: 5px;
   border: 1px solid #383838;
   transition: all 0.3s ease;
+
 }
 #sidebar .list-items .icons a:hover{
   background: #404040;
@@ -157,4 +167,5 @@
   font-size: 40px;
   font-weight: 700;
 }
+
 
