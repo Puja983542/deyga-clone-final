@@ -165,7 +165,7 @@ arr2.forEach(function(elem){
     divs.append(image,names,div4,div3,div2)
     parent2.append(divs)
 })
-}
+
 
 
 var sliderappend=document.querySelector("#sliderappend")
