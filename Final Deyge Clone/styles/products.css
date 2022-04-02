@@ -35,6 +35,9 @@ body{
     
 }
 /* addToCart btn */
+#backhome{
+    font-size: 13px;
+}
 .cart_button{
     height: 40px;
     width:100px;
