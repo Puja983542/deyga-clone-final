@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Combo Page</title>
     <link rel="stylesheet" href="./styles/navbar_footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -151,6 +151,7 @@
    let parent=document.querySelector("#middle_container");
 
 let cartProductsArr = JSON.parse(localStorage.getItem("cart")) || [];
+let  IwishData = JSON.parse(localStorage.getItem("wishData"))  || [];
 
 function displaydata(cardarry){
 parent.innerHTML=null;
@@ -210,7 +211,8 @@ function () {
     wish.style.fontSize="28px";
      wish.style.border="1px solid white"
      wish.addEventListener("click",()=>{
-        
+          wish.style.backgroundColor = "#A17C5F"
+           whishlistFunction(elem);
      });
 
 
@@ -403,6 +405,24 @@ function addToCartFunction(elem){
         cartProductsArr.push(elem);
         localStorage.setItem("cart",JSON.stringify(cartProductsArr));
      }
+}
+
+let  whishlistFunction = (elem)=>{
+    let maintainWhishlistDuplicateArr = JSON.parse(localStorage.getItem("wishData")) || [];
+     //if(maintainWhishlistDuplicateArr.inc)
+     let flag = false;
+     for(let i=0;i<maintainWhishlistDuplicateArr.length;i++){
+         if(elem.id==maintainWhishlistDuplicateArr[i].id){
+             flag=true;
+         }
+     }
+
+     if(flag==false){
+        alert("Item Added to Whishlist!");
+       IwishData.push(elem);
+       localStorage.setItem("wishData",JSON.stringify(IwishData));
+     }
+
 }
 
 </script>
