@@ -13,29 +13,29 @@
            <img src="https://cdn.shopify.com/s/files/1/0034/7901/1441/files/200x150-01.png?32925" alt=""/>
            <div>
                
-               <div>Information</div>
+               <div id="bhagoInformationPage">Information</div>
                <div>></div>
-               <div>Shipping</div>
+               <div id="bhagoJaldiShipingPage">Shipping</div>
                <div>></div>
                <div>Payment</div>
            </div>
            <div>
                <div>
                    <div>Contact</div>
-                   <div>email</div>
-                   <div>Change</div>
+                   <div id="paymentemail">email</div>
+                   <div id="bhagoInformationPage1">Change</div>
                </div>
                <hr/>
                <div>
                    <div>Ship to</div>
-                   <div>address</div>
-                   <div>Change</div>
+                   <div id="paymentaddress">address</div>
+                   <div id="bhagoInformationPage2">Change</div>
                </div>
                <hr/>
                <div>
                 <div>Method</div>
-                <div>Free shipping</div>
-                <div>Change</div>
+                <div id="paymentfreeornotokay">Free shipping</div>
+                <div id="bhagoInformationPage3">Change</div>
             </div>
            </div>
            <div>Payment<p>All transactions are secure and encrypted.</p></div>
@@ -88,8 +88,8 @@
             </div>
         </div>
             <div id="checkoutbtndiv">
-                <div>< Return to information</div>
-                <button>Complete order</button>
+                <div id="gotoinfopagefastly">< Return to information</div>
+                <button id="gotofinalpaymentpage">Complete order</button>
             </div>
             <hr style="margin-top: 100px;"/>
             <div>All rights reserved deyga.in</div>
@@ -170,6 +170,45 @@
   document.querySelector("#taxes>div:last-child").innerText = totalPriceCart;
   document.querySelector("#subtotalprice>div:last-child").innerText = totalPriceCart
   
+</script>
+
+
+<script>
+     let shippingemail = JSON.parse(localStorage.getItem("myemail"));
+     let shippingaddress = JSON.parse(localStorage.getItem("myaddress"));
+     document.getElementById("paymentemail").innerText = shippingemail;
+     document.getElementById("paymentaddress").innerText = shippingaddress;
+     let paymentfreeotnot = localStorage.getItem("freeOrNot");
+     document.getElementById("paymentfreeornotokay").innerText = paymentfreeotnot;
+     document.getElementById("putfreeorNot").innerText = paymentfreeotnot;
+     document.getElementById("putfreeorNot").style.marginLeft="34px"
+
+
+     
+     document.getElementById("bhagoInformationPage").addEventListener("click",()=>{
+         window.location.href="./information.html"
+     })
+     document.getElementById("bhagoJaldiShipingPage").addEventListener('click',()=>{
+         window.location.href="./Shipping.html"
+     })
+     document.getElementById("bhagoInformationPage1").addEventListener("click",()=>{
+         window.location.href="./information.html"
+     })
+     document.getElementById("bhagoInformationPage2").addEventListener("click",()=>{
+         window.location.href="./information.html"
+     })
+     document.getElementById("bhagoInformationPage3").addEventListener("click",()=>{
+         window.location.href="./information.html"
+     })
+     //gotoinfopagefastly
+     document.getElementById("gotoinfopagefastly").addEventListener("click",()=>{
+         window.location.href="./information.html"
+     })
+
+     document.getElementById("gotofinalpaymentpage").addEventListener("click",()=>{
+          window.location.href="finalpayment.html"
+     })
+
 </script>
 
 

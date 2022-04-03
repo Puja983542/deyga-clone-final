@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Animated Sidebar Menu | CodingLab</title>
+    <link rel="stylesheet" href="./right.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+      #container{
+        height: 200px;
+        overflow-y: scroll;
+      }
+      img{
+        width: 100px;
+        height: 100px;
+      }
+       #container>div{
+         /* border: 5px solid green; */
+         width: 300px;
+       }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper" >
+      <input type="checkbox" id="btn" hidden>
+      <label for="btn" class="menu-btn">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+        
+      </label>
+      <nav id="sidebar" style="border: 3px solid yellow;">
+        <div class="title" style="border: 2px solid red;">Side Menu</div>
+        <div id="container" style="border: 3px solid white;"></div>
+       
+      </nav>
+    </div>
+   
+    <!-- <div id="container"></div> -->
+  </body>
+</html>
+<script>
+     let oralArr = [
+        {id:1, name:"Charcoal Tooth Whitening Powder",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/CharcoalToothPowder_400x.jpg?v=1647863279",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/CharcoalToothPowder_400x.jpg?v=1647863279",
+        review:"17 reviews",mrp:"MRP ₹ 290.00",del:"" },
+        {id:2, name:"Tooth brush",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Tooth_20brusg_400x.jpg?v=1641031663",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/Tooth_20brusg_400x.jpg?v=1641031663",
+        review:"6 reviews",mrp:"MRP ₹ 140.00",del:"" },
+        {id:3, name:"Herbal Tooth & Gum Powder",
+        image:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/HerbalToothPowder_400x.jpg?v=1647863321",
+        image2:"https://cdn.shopify.com/s/files/1/0034/7901/1441/products/HerbalToothPowder_400x.jpg?v=1647863321",
+        review:"12 reviews",mrp:"MRP ₹ 290.00",del:"" },
+   ]
+
+//container
+    oralArr.map((el)=>{
+
+        let div = document.createElement("div");
+
+        let img = document.createElement("img");
+        img.src = el.image;
+
+        let btn = document.createElement("button");
+        btn.innerText="Add to cart"
+
+        div.append(img,btn)
+
+        document.getElementById("container").append(div)
+    })
+
+</script>

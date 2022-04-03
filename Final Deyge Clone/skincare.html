@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkinCare Page</title>
+    <link rel="stylesheet" href="./styles/right.css">
+    <link rel="stylesheet" href="./styles/cart1.css">
     <link rel="stylesheet" href="./styles/navbar_footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,6 +14,35 @@
     <link rel="stylesheet" href="./styles/products.css">
    
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <style>
+        /* #wrapperokay{
+            margin-top: -8.5% !important;
+        } */
+        /* #btn{
+            border: 5px solid red !important;
+        } */
+        .menu-btn{
+            border: 3px solid white !important;
+            background-color: white !important;
+            color: black !important;
+            margin-left: -13%;
+            position: sticky;
+            top: 10%;
+        }
+        #sidebar{
+            margin-top: -10px;
+        }
+        #cartMainContainer{
+            width: 100% !important;
+            height: 370px;
+            overflow-y: scroll;
+        }
+        /* label{
+            position: sticky !important; 
+             top: 0; 
+        } */
+       
+    </style>
     
     <style>
         #stickyImages{
@@ -44,6 +75,29 @@
 </head>
 <body>
     <div id="navbar"></div>
+    <div class="wrapper" id="wrapperokay">
+        <input type="checkbox" id="btn" hidden/>
+        <label for="btn" class="menu-btn" >
+          <!-- <i class="fas fa-bars">Cart</i>
+          <i class="fas fa-times"></i> -->
+          cart
+        </label>
+        <nav id="sidebar" >
+          <div class="title" id="carttitle">Cart</div>
+        
+     <hr/>
+    
+     <div id="cartMainContainer" ></div>
+     <hr/>
+     <h5>Add Order Note</h5>
+     <div>Shipping & taxes calculated at checkout</div>
+     
+     <div id="hellocheckout">
+         <div>Checkout</div>
+         <div id="showTotalPrice"></div>
+     </div>
+        </nav>
+      </div>
     <div id="stickyImages">
         <img src="https://lh3.googleusercontent.com/stk7qIhvTn-6p1x3eYOfqnNCdIkNjyIoZPlZtwiDCzdhxEYc8Gsm1obY0zYdR13NfW_UkF4=s88" alt=""/>
         <img src="https://lh3.googleusercontent.com/7GC8KgKN3PBmRKrqYOpBvozvAkrDknIwHhpDyMlDhEo_xEEEmHN81MTm7dNQvMyg4CcZ=s87" alt=""/>
@@ -493,6 +547,158 @@ function addToCartFunction(elem){
        window.location.href="./index.html"
    })
 
+</script>
+
+<script type="module">
+
+    let cartItemsArr = JSON.parse(localStorage.getItem("cart")) || [];
+    console.log("cartItemsArr",cartItemsArr)
+
+    const cartDisplay = (cartItemsArr)=>{
+        document.getElementById('cartMainContainer').innerHTML = null;
+
+        cartItemsArr.map((el)=>{
+
+            let cartDiv = document.createElement("div");
+
+            let productImg = document.createElement("img");
+            productImg.src = el.image;
+
+            let nameAndPriceDiv = document.createElement("div");
+
+            let title = document.createElement("div");
+            title.innerText = el.name;
+
+            let price1 = el.mrp.slice(6,el.mrp.length-3);
+            let price = document.createElement("div");
+            price.innerText = `Rs. ${price1}`;
+            //console.log(price.innerText.slice(4,price.innerText.length));
+
+            nameAndPriceDiv.append(title,price);
+            
+            let QuantityAndRemoveDiv = document.createElement("div");
+
+            let QuantityDiv = document.createElement("div");
+
+            let decdiv = document.createElement("div");
+            decdiv.innerText = "-"
+            decdiv.addEventListener("click",()=>{
+                decquantity(el);
+            })
+
+            let Quantity = document.createElement("div");
+            Quantity.innerText = el.quantity;
+            Quantity.setAttribute("id","qty")
+
+            let incdiv = document.createElement("div");
+            incdiv.innerText = "+"
+            incdiv.addEventListener("click",()=>{
+                incquantity(el);
+            })
+
+            QuantityDiv.append(decdiv,Quantity,incdiv)
+            QuantityDiv.style.width="100px"
+
+            let removeDiv = document.createElement("div");
+            removeDiv.innerText = "Remove"
+            removeDiv.setAttribute("id","removeHover")
+            removeDiv.addEventListener("click",()=>{
+                deleteProductFromCart(el.id);
+            })
+
+            QuantityAndRemoveDiv.append(QuantityDiv,removeDiv)
+
+            let totalPriceDiv = document.createElement("div");
+            let rs = document.createElement("div");
+            rs.innerText = "Rs.";
+            let priceWithQuantity = document.createElement("div");
+            priceWithQuantity.innerText = (el.quantity)*(price1);
+
+            totalPriceDiv.append(rs,priceWithQuantity)
+
+
+            cartDiv.append(productImg,nameAndPriceDiv,QuantityAndRemoveDiv,totalPriceDiv);
+            document.getElementById('cartMainContainer').append(cartDiv);
+
+        })
+
+    }
+
+   cartDisplay(cartItemsArr)
+
+   let totalPrice = cartItemsArr.reduce((acc,ele)=>{
+          return acc+((ele.quantity)*(ele.mrp.slice(6,ele.mrp.length-3)))
+    },0)
+    console.log(totalPrice);
+
+     document.getElementById('showTotalPrice').innerText = totalPrice;
+
+    
+    
+
+   
+   const deleteProductFromCart = (id)=>{
+
+      let filteredArr = JSON.parse(localStorage.getItem("cart")) || [];
+
+      let deletedArr = filteredArr.filter((el)=>{
+         document.getElementById('showTotalPrice').innerText = totalPrice-el.quantity*(el.mrp.slice(6,el.mrp.length-3))
+        //  document.getElementById('countCartItems').innerText = totalquantityofcartproducts-el.quantity;
+         return el.id!=id;
+      })
+
+      
+      localStorage.setItem("cart",JSON.stringify(deletedArr));
+      cartDisplay(deletedArr);
+
+    }
+
+
+   let incquantity=(ele)=>{
+       
+        ele.quantity++;
+        let target = cartItemsArr.map(el=>el.id == ele.id?{...el,quantity:ele.quantity++}:el)
+        localStorage.setItem("cart",JSON.stringify(target))
+        cartDisplay(target);
+
+        let totalPrice = target.reduce((acc,ele)=>{
+          return acc+((ele.quantity)*(ele.mrp.slice(6,ele.mrp.length-3)))
+        },0)
+
+        document.getElementById('showTotalPrice').innerText = totalPrice;
+
+        let totalquantityofcartproducts = target.reduce((acc,ele)=>{
+           return acc+(ele.quantity);
+        },0)
+
+        // document.getElementById('countCartItems').innerText = totalquantityofcartproducts
+   }
+   
+    let decquantity = (ele)=>{
+        if(ele.quantity>=2){
+          ele.quantity--;
+       }
+        let target = cartItemsArr.map(el=>el.id == ele.id?{...el,quantity:ele.quantity++}:el)
+        localStorage.setItem("cart",JSON.stringify(target))
+        cartDisplay(target);
+
+        let totalPrice = target.reduce((acc,ele)=>{
+          return acc+((ele.quantity)*(ele.mrp.slice(6,ele.mrp.length-3)))
+        },0)
+
+        document.getElementById('showTotalPrice').innerText = totalPrice;
+
+        let totalquantityofcartproducts = target.reduce((acc,ele)=>{
+           return acc+(ele.quantity);
+        },0)
+
+        // document.getElementById('countCartItems').innerText = totalquantityofcartproducts
+    }     
+      
+    
+  document.getElementById("hellocheckout").addEventListener("click",()=>{
+      window.location.href="./information.html"
+  })
 </script>
 
 
